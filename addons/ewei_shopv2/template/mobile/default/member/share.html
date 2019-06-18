@@ -1,0 +1,91 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css"
+      href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon.css?v=2.0.0">
+<link rel="stylesheet" type="text/css"
+      href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon-new.css?v=2017030302">
+<link rel="stylesheet" href="../addons/ewei_shopv2/static/js/dist/swiper/swiper.min.css">
+<link rel="stylesheet" href="../addons/ewei_shopv2/template/mobile/default/static/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/live/static/css/living.css?v=20170628"/>
+
+<body ontouchstart="">
+
+<div class="fui-page-group ">
+    <div class="fui-page  fui-page-current" id="fui-page-1554275708948">
+        <div class="fui-header">
+            <div class="fui-header-left">
+                <a class="back" onclick="location.back()"></a>
+            </div>
+            <div class="title">推广中心</div>
+            <div class="fui-header-right"></div>
+        </div>
+        <div class='fui-content member-page navbar'>
+            <div style="overflow: hidden;height: 7.5rem;position: relative;background: #fff">
+                <div class="headinfo" style="z-index:100;border: none;">
+                    <a class="setbtn" href="{php echo mobileUrl('member/info')}" data-nocache='true'><i class="icon icon-shezhi"></i></a>
+                    <div class="child">
+                        <div class="title">我的上级</div>
+                        <div class="num">{$fmember['nickname']}</div>
+                    </div>
+                    <div class="child userinfo">
+                        <a href="{php echo mobileUrl('member/info')}" data-nocache="true" style="color: white;">
+                            <div class="face"><img src="{$member['avatar']}" onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"/></div>
+                            <div class="name">{$member['nickname']}</div>
+                        </a>
+                        <div class="level" {if !empty($_W['shopset']['shop']['levelurl'])}onclick='location.href="{$_W['shopset']['shop']['levelurl']}"'{/if}>
+                        {if empty($level['id'])}
+                        [{if empty($_W['shopset']['shop']['levelname'])}普通会员{else}{$_W['shopset']['shop']['levelname']}{/if}]
+                        {else}
+                        [{$level['levelname']}]
+                        {/if}
+                        {if !empty($_W['shopset']['shop']['levelurl'])}<i class='icon icon-question1' style='font-size:0.65rem'></i>{/if}
+                    </div>
+                </div>
+                <div class="child">
+                   <a href="{php echo mobileUrl('member/team',array('id'=>$member['id']))}">
+                        <div class="title">团队人数</div>
+                        <div class="num">{php echo number_format($member['invite'],0)}人</div>
+                    </a>
+                </div>
+            </div>
+            <div class="member_header"></div>
+        </div>
+        <div style="margin-top:70px;color: #000;">
+            <p style="font-size: 1rem; margin-left: 30px;">如何推广 ？</p>
+            <ul style=" margin-left: 50px; list-style-type:none; margin-top: 10px;">
+                <li style="margin-top: 10px; font-size: 1rem;">
+                    ① <span style="font-size: 0.8rem">使用推广链接推广</span>
+                </li>
+                <li>
+                    <input type="url" id="share_url" value="{$url}" style="margin-top: 10px; margin-left: 20px;height: 30px;  border: 1px solid #ff0011; font-size: 0.7rem; ">
+                    <button style="border: 0px; background: #ff0011; color: white; padding: 7px 20px;" onclick="copyUrl()">点击复制</button>
+                </li>
+                <li style="margin-top: 10px; font-size: 1rem;">
+                    ② <span style="font-size: 0.8rem">使用推广二维码推广</span>
+                </li>
+                <li>
+                    <div  style="margin-left: 20px;margin-top: 10px;display: inline-block" >
+                        <img id="share_img" src="{php echo m('qrcode')->createQrcode($url)}" width='130' alt='链接二维码'>
+                    </div>
+                    <button style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" onclick="save()">点击保存</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function copyUrl() {
+        var Url = document.getElementById("share_url");
+        Url.select(); // 选择对象
+        document.execCommand("Copy"); // 执行浏览器复制命令
+        alert("复制成功！");
+    }
+    function save() {
+        var img = document.getElementById("share_img");
+        var alink = document.createElement("a");
+        alink.href = img.src;
+        alink.click();
+    }
+</script>
+
+{template '_footer'}

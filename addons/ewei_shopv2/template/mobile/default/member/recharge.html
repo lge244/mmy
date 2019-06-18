@@ -1,0 +1,85 @@
+{template '_header'}
+<link rel="stylesheet" type="text/css"
+      href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon.css?v=2.0.0">
+<link rel="stylesheet" type="text/css"
+      href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon-new.css?v=2017030302">
+<link rel="stylesheet" href="../addons/ewei_shopv2/static/js/dist/swiper/swiper.min.css">
+<link rel="stylesheet" href="../addons/ewei_shopv2/template/mobile/default/static/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="../addons/ewei_shopv2/plugin/live/static/css/living.css?v=20170628"/>
+
+<body ontouchstart="">
+
+<div class="fui-page-group ">
+    <style>
+    </style>
+    <div class="fui-page  fui-page-current" id="fui-page-1554275708948">
+        <div class="fui-header">
+            <div class="fui-header-left">
+                <a class="back" onclick="location.back()"></a>
+            </div>
+            <div class="title">我的佣金</div>
+            <div class="fui-header-right"></div>
+        </div>
+        <div class='fui-content member-page navbar'>
+            <div style="overflow: hidden;height: 7.5rem;position: relative;background: #fff">
+                <div class="headinfo" style="z-index:100;border: none;">
+                    <div class="child">
+                        <a href="{php echo mobileUrl('member/record/share')}">
+                            <div class="title">下级佣金</div>
+                            <div class="num">{php echo number_format($member['share_money'],2)} ￥</div>
+                        </a>
+                    </div>
+                    <div class="child userinfo">
+
+                            <div class="title">历史总佣金</div>
+                            <div class="num">{php echo number_format($member['brokerage'],2)} ￥</div>
+                            <div class="title">总佣金</div>
+                            <div class="num">{php echo number_format($member['brokerage'],2)} ￥</div>
+                    </div>
+                    <div class="child">
+                        <a href="{php echo mobileUrl('member/record/shareholderrecord')}">
+                            <div class="title">分红金额</div>
+                            <div class="num">{php echo number_format($member['shareholder_money'],2)} ￥</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="member_header"></div>
+            </div>
+            <div class="fui-cell-group fui-cell-click">
+                <a class="fui-cell" href="{php echo mobileUrl('member/record')}">
+                    <div class="fui-cell-icon"><i class="icon icon-gerenzhongxin"></i></div>
+                    <div class="fui-cell-text"><p>总金额记录</p></div>
+                    <div class="fui-cell-remark"></div>
+                </a>
+                <a class="fui-cell" href="{php echo mobileUrl('member/record/share')}">
+                    <div class="fui-cell-icon"><i class="icon icon-chenggongtixianyongjin"></i></div>
+                    <div class="fui-cell-text"><p>下级佣金记录</p></div>
+                    <div class="fui-cell-remark"></div>
+                </a>
+                <a class="fui-cell" href="{php echo mobileUrl('member/record/shareholderrecord')}">
+                    <div class="fui-cell-icon"><i class="icon icon-jifen"></i></div>
+                    <div class="fui-cell-text"><p>分红金额记录</p></div>
+                    <div class="fui-cell-remark"></div>
+                </a>
+                <a class="fui-cell" href="{php echo mobileUrl('member/record/withdraw')}">
+                    <div class="fui-cell-icon"><i class="icon icon-history"></i></div>
+                    <div class="fui-cell-text"><p>历史提现记录</p></div>
+                    <div class="fui-cell-remark"></div>
+                </a>
+            </div>
+            <div style="margin-top:70px;color: #000;">
+                <ul style="text-align: center; list-style-type:none; margin-top: 10px;">
+                    <li>
+                        <a style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" href="{php echo mobileUrl('member/recharge/withdraw')}">申请提现</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+
+</script>
+
+{template '_footer'}
