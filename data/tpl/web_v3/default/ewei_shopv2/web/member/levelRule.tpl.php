@@ -35,27 +35,23 @@
                     <?php  } } ?>
                 </select>
             </div>
-            <div class='input-group fixsingle-input-group' style="margin-top: 5px;">
-                <span class='input-group-addon'>代理返利</span>
-                <input type="number" name="agency_purchase_time" id="agency_ratio" class="form-control" value="<?php  echo $agency_rule['agency_ratio'];?>"/>
-                <span class='input-group-addon'>天</span>
-            </div>
+
         </div>
     </div>
 
     <div class="form-group">
-        <label class="col-lg control-label"></label>
-        <div class="col-sm-9 col-xs-12">
-            <input type="submit" value="保存" class="btn btn-primary submit"/>
-        </div>
+    <label class="col-lg control-label"></label>
+    <div class="col-sm-9 col-xs-12">
+        <input type="submit" value="保存" class="btn btn-primary submit"/>
     </div>
+</div>
 </div>
 
 <?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>
 <script>
     $('.submit').click(function () {
         var agency_purchase_time = $('#agency_purchase_time').val();
-        var agency_ratio = $('#agency_ratio').val();
+
         var agency_goodsid = $('#agency_goodsid option:selected').val()
         if (agency_purchase_time == 0 || agency_goodsid == 0 || agency_ratio == 0){
             tip.msgbox.suc("规则信息请填写完整！");
@@ -64,7 +60,7 @@
 
         $.post("<?php  echo webUrl('member/levelRule/add')?>",{
             "agency_purchase_time":agency_purchase_time,
-            "agency_ratio":agency_ratio,
+
             "agency_goodsid":agency_goodsid,
         },function (res) {
             if(res.code == 0){

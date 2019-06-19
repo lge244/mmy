@@ -2,14 +2,310 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e549375-96b5-4cca-95c2-bf686547325a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/agency.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/gudong.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/shareholderDetails.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/anchor/anchor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/attachment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/attachment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/alignicon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/alignicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/file-icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/file-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/progress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/success.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/attachment/images/success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/background/background.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/background/background.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/background/background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/background/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/background/images/success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/chart.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/charts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/charts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/images/charts0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/images/charts1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/images/charts2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/images/charts3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/images/charts4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/charts/images/charts5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/emotion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/emotion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/emotion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/bface.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/cface.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/fface.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/jxface2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/tface.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/wface.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/emotion/images/yface.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/gmap/gmap.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/help/help.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/help/help.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/help/help.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/image.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/alignicon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/progress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/success.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/image/images/success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/insertframe/insertframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/internal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/link/link.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/map/map.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/map/show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/music/music.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/music/music.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/music/music.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/preview/preview.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/addimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/brush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/delimg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/delimgH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/empty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/emptyH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/eraser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/redo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/redoH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/scale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/scaleH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/size.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/undo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/images/undoH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/scrawl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/scrawl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/scrawl/scrawl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/searchreplace/searchreplace.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/searchreplace/searchreplace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/snapscreen/snapscreen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/spechars/spechars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/spechars/spechars.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/table/dragicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/table/edittable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/table/edittable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/table/edittable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/table/edittd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/table/edittip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/images/bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/images/pre0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/images/pre1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/images/pre2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/images/pre3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/images/pre4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/template/template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/center_focus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/file-icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/file-icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/left_focus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/none_focus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/progress.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/right_focus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/success.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/images/success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/video.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/video.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/video/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/webapp/webapp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/wordimage/imageUploader.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/wordimage/tangram.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/wordimage/wordimage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/dialogs/wordimage/wordimage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/addimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/alldeletebtnhoverskin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/alldeletebtnupskin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/deletedisable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/deleteenable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/listbackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/localimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/rotateleftdisable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/rotateleftenable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/rotaterightdisable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/rotaterightenable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/en/images/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/zh-cn/images/copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/zh-cn/images/localimage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/zh-cn/images/music.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/zh-cn/images/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/lang/zh-cn/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/php/Uploader.class.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/php/action_crawler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/php/action_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/php/action_upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/php/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/php/controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/css/ueditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/css/ueditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/dialogbase.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/anchor.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/arrow_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/arrow_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/button-bg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/cancelbutton.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/charts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/cursor_h.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/cursor_h.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/cursor_v.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/cursor_v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/dialog-title-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/filescan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/highlighted.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/icons-all.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/icons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/loaderror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/lock.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/neweditor-tab-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/pagebreak.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/scale.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/sortable.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/spacer.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/sparator_v.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/table-cell-align.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/tangram-colorpicker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/toolbar_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/unhighlighted.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/upload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/videologo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/word.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/default/images/wordpaste.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/themes/iframe.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/SyntaxHighlighter/shCore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/codemirror/codemirror.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/codemirror/codemirror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/adapters/mootools-adapter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/adapters/prototype-adapter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/adapters/standalone-framework.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/highcharts-more.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/highcharts-more.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/highcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/highcharts.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/annotations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/canvas-tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/canvas-tools.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/drilldown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/funnel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/heatmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/heatmap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/map.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/no-data-to-display.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/themes/dark-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/themes/dark-green.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/themes/gray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/themes/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/highcharts/themes/skies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/jquery-1.10.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/jquery-1.10.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/jquery-1.10.2.min.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/font/vjs.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/font/vjs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/font/vjs.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/font/vjs.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/video-js.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/video-js.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/video-js.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/video.dev.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/video-js/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/Uploader.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.custom.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.flashonly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.flashonly.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.html5only.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.html5only.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.withoutimage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/xss.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/zeroclipboard/ZeroClipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/ueditor.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/ueditor.all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/ueditor.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/ueditor.parse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor/ueditor.parse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/agency.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/gudong.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelDetails.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/shareholderDetails.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelRule.html" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelRule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tpl/web_v3/default/ewei_shopv2/web/member/levelRule.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/tpl/web_v3/default/ewei_shopv2/web/member/levelRule.tpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -28,37 +324,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17775">
+              <caret line="711" column="54" selection-start-line="711" selection-start-column="36" selection-end-line="711" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelDetails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+              <folding>
+                <element signature="n#style#0;n#script#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/agency.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="175">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/level.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2025">
+              <caret line="81" column="21" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/level/post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2575">
+              <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/shareholderRule.php">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/agency.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            <state relative-caret-position="100">
+              <caret line="4" column="121" lean-forward="true" selection-start-line="4" selection-start-column="121" selection-end-line="4" selection-end-column="121" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/participation/index.php">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/gudong.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="200">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/op.php">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/gudong.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2750">
-              <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+            <state relative-caret-position="75">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -75,6 +419,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>var tallage =</find>
+      <find>goods</find>
+      <find>.js</find>
+      <find>static/js/dist</find>
+      <find>form</find>
+      <find>url(</find>
+      <find>详情</find>
+      <find>tab</find>
+      <find>product</find>
+      <find>$id</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,14 +438,10 @@
       <list>
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/shareholderRule.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/shareholderRule.html" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelRule.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/admins/Service.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/admins/service.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/admins/service.php" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/account/index.php" />
-        <option value="$PROJECT_DIR$/data/config.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/create.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js" />
@@ -100,6 +449,20 @@
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/myinfo/index.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/myinfo/index.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/participation/index.php" />
+        <option value="$PROJECT_DIR$/data/config.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelRule.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelDetails.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/shareholderDetails.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/shareholderDetails.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelDetails.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/account/agency.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/account/agency.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/gudong.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/gudong.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/agency.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/agency.html" />
       </list>
     </option>
   </component>
@@ -114,7 +477,7 @@
       </server>
     </servers>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="360" />
     <option name="y" value="147" />
     <option name="width" value="852" />
@@ -131,19 +494,144 @@
         <subPane>
           <expand>
             <path>
-              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
               <item name="addons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="mall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
               <item name="addons" type="462c0819:PsiDirectoryNode" />
               <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="diypage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="diypage" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="diypage" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="diypage" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="mobile" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="web_v3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="web_v3" type="462c0819:PsiDirectoryNode" />
+              <item name="member" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mmy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mmy" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="ewei_shopv2" type="462c0819:PsiDirectoryNode" />
+              <item name="template" type="462c0819:PsiDirectoryNode" />
+              <item name="web_v3" type="462c0819:PsiDirectoryNode" />
+              <item name="member" type="462c0819:PsiDirectoryNode" />
+              <item name="level" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -153,11 +641,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WWW\mmy\addons\ewei_shopv2\template\mobile\default\goods" />
+      <recent name="D:\WWW\mmy\addons\ewei_shopv2\core\mobile\goods" />
+      <recent name="D:\WWW\mmy\addons\ewei_shopv2\static\js\dist" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,17 +679,20 @@
       <updated>1560736518418</updated>
       <workItem from="1560736519829" duration="26411000" />
       <workItem from="1560829640979" duration="808000" />
+      <workItem from="1560838459412" duration="3519000" />
+      <workItem from="1560842461983" duration="9658000" />
+      <workItem from="1560905028204" duration="1037000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27219000" />
+    <option name="totallyTimeSpent" value="41433000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1426868" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24433658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -218,296 +717,351 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/download/index.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/templatetool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/tmessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/upgrade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/shareholderRule.html">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/weixintemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/sms/temp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/sms/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1282">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/page/diy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-925">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/page/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/page/mod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/page/plu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-250">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/page/sys.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/menu/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-550">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/processor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-732">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/model.php.jiami">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4832">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/temp/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/plugins/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-957">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/sysset/qiniu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/tabs.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://D:/phpstudy/PHPTutorial/WWW/sjx/tp5.1demo/application/admin/view/infor/adv_type_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/_header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="16" column="93" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/_footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="75" column="52" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/pc/template/mobile/default/goods/detail.html.back">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="625" column="58" selection-start-line="625" selection-start-column="40" selection-end-line="625" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/pay.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/inc/page.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/static/js/dist/ueditor.all.min.js" />
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods/category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="431" column="32" lean-forward="true" selection-start-line="431" selection-start-column="32" selection-end-line="431" selection-end-column="32" />
+        <state relative-caret-position="125">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/common.func.php">
+    <entry file="file://$PROJECT_DIR$/data/tpl/web_v3/default/ewei_shopv2/web/order/list.tpl.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="843">
-          <caret line="57" column="22" lean-forward="true" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
+        <state relative-caret-position="-182">
+          <caret line="958" column="131" selection-start-line="958" selection-start-column="131" selection-end-line="958" selection-end-column="131" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php">
+    <entry file="file://$PROJECT_DIR$/install.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="990" column="19" selection-start-line="990" selection-start-column="13" selection-end-line="990" selection-end-column="19" />
+        <state relative-caret-position="743">
+          <caret line="685" column="18" lean-forward="true" selection-start-line="685" selection-start-column="18" selection-end-line="685" selection-end-column="18" />
           <folding>
-            <element signature="e#27215#30635#1#PHP" />
-            <element signature="e#30662#32612#1#PHP" />
-            <element signature="e#32642#33244#1#PHP" />
-            <element signature="e#33270#34333#1#PHP" />
-            <element signature="e#34359#36514#1#PHP" />
-            <element signature="e#42076#43674#1#PHP" />
-            <element signature="e#43705#45753#1#PHP" />
-            <element signature="e#45780#50601#1#PHP" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/admins/service.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelRule.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="366">
+          <caret line="71" column="17" lean-forward="true" selection-start-line="61" selection-start-column="11" selection-end-line="71" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/order/index.php">
+    <entry file="file://D:/phpstudy/PHPTutorial/WWW/sjx/tp5.1demo/application/admin/view/infor/art_add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="45" selection-start-line="45" selection-end-line="46" />
+        <state relative-caret-position="2000">
+          <caret line="155" column="37" lean-forward="true" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/admins/index.html">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="5" lean-forward="true" selection-end-line="273" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/admins/service.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/admins/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="44" lean-forward="true" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="889" column="40" lean-forward="true" selection-start-line="889" selection-start-column="40" selection-end-line="889" selection-end-column="40" />
+        <state relative-caret-position="200">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/account/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="296" column="1" lean-forward="true" selection-start-line="296" selection-start-column="1" selection-end-line="296" selection-end-column="1" />
+        <state relative-caret-position="-325">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/detail2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-882" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/code.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/member/history.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/shareholderDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
-            <element signature="n#getWapSet#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#login#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#register#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#forget#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#rf#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#logout#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#sns#0;n#Index_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#verifycode#0;n#Index_EweiShopV2Page#0;n#!!top" />
+            <element signature="n#style#0;n#script#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/create.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/shareholderDetails.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="2900" column="5" lean-forward="true" selection-start-line="2900" selection-start-column="5" selection-end-line="2900" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/level/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-259">
+          <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17775">
+          <caret line="711" column="54" selection-start-line="711" selection-start-column="36" selection-end-line="711" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/levelDetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
           <folding>
-            <element signature="n#merchData#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#diyformData#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#main#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#getcouponprice#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#caculatecoupon#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#caculate#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#submit#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#singleDiyformData#0;n#Create_EweiShopV2Page#0;n#!!top" />
-            <element signature="n#diyform#0;n#Create_EweiShopV2Page#0;n#!!top" />
+            <element signature="n#style#0;n#script#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/agency.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="545" lean-forward="true" selection-start-line="545" selection-end-line="545" />
-          <folding>
-            <element signature="e#1564#1570#1" expanded="true" />
-            <element signature="e#1773#1797#0" expanded="true" />
-            <element signature="e#2469#2499#0" expanded="true" />
-            <element signature="e#4017#4056#0" expanded="true" />
-            <element signature="e#4240#4261#0" expanded="true" />
-            <element signature="e#4525#4546#0" expanded="true" />
-            <element signature="e#4596#4617#0" expanded="true" />
-            <element signature="e#4649#4696#0" expanded="true" />
-            <element signature="e#4906#4927#0" expanded="true" />
-            <element signature="e#6178#6202#0" expanded="true" />
-            <element signature="e#6409#6430#0" expanded="true" />
-            <element signature="e#6674#6695#0" expanded="true" />
-            <element signature="e#6741#6762#0" expanded="true" />
-            <element signature="e#6790#6837#0" expanded="true" />
-            <element signature="e#7034#7055#0" expanded="true" />
-            <element signature="e#7305#7327#0" expanded="true" />
-            <element signature="e#7451#7478#0" expanded="true" />
-            <element signature="e#7531#7663#0" expanded="true" />
-            <element signature="e#7952#7993#0" expanded="true" />
-            <element signature="e#9519#9538#0" expanded="true" />
-            <element signature="e#9562#9599#0" expanded="true" />
-            <element signature="e#10941#10962#0" expanded="true" />
-            <element signature="e#11033#11051#0" expanded="true" />
-            <element signature="e#11102#11121#0" expanded="true" />
-            <element signature="e#11183#11209#0" expanded="true" />
-            <element signature="e#11584#11603#0" expanded="true" />
-            <element signature="e#11894#11953#0" expanded="true" />
-            <element signature="e#11954#11959#1" expanded="true" />
-            <element signature="e#12366#12384#0" expanded="true" />
-            <element signature="e#12472#12498#0" expanded="true" />
-            <element signature="e#12551#12588#0" expanded="true" />
-            <element signature="e#12621#12626#1" expanded="true" />
-            <element signature="e#13000#13005#0" expanded="true" />
-            <element signature="e#13076#13081#0" expanded="true" />
-            <element signature="e#13346#13372#0" expanded="true" />
-            <element signature="e#13484#13489#0" expanded="true" />
-            <element signature="e#15056#15085#0" expanded="true" />
-            <element signature="e#15222#15265#0" expanded="true" />
-            <element signature="e#15512#15539#0" expanded="true" />
-            <element signature="e#15999#16018#0" expanded="true" />
-            <element signature="e#16187#16232#0" expanded="true" />
-            <element signature="e#16531#16551#0" expanded="true" />
-            <element signature="e#17116#17136#0" expanded="true" />
-            <element signature="e#18025#18052#0" expanded="true" />
-            <element signature="e#20071#20091#0" expanded="true" />
-            <element signature="e#20512#20531#0" expanded="true" />
-            <element signature="e#20534#20539#0" expanded="true" />
-            <element signature="e#20779#20784#0" expanded="true" />
-            <element signature="e#21181#21202#0" expanded="true" />
-            <element signature="e#21240#21258#0" expanded="true" />
-            <element signature="e#21615#21636#0" expanded="true" />
-            <element signature="e#21674#21692#0" expanded="true" />
-            <element signature="e#21796#21801#0" expanded="true" />
-            <element signature="e#22063#22084#0" expanded="true" />
-            <element signature="e#22122#22140#0" expanded="true" />
-            <element signature="e#22244#22249#0" expanded="true" />
-            <element signature="e#22481#22502#0" expanded="true" />
-            <element signature="e#22540#22558#0" expanded="true" />
-            <element signature="e#22662#22667#0" expanded="true" />
-            <element signature="e#22946#22967#0" expanded="true" />
-            <element signature="e#23005#23023#0" expanded="true" />
-            <element signature="e#23125#23130#0" expanded="true" />
-            <element signature="e#23374#23395#0" expanded="true" />
-            <element signature="e#23433#23451#0" expanded="true" />
-            <element signature="e#23553#23558#0" expanded="true" />
-            <element signature="e#23905#23923#0" expanded="true" />
-            <element signature="e#23944#23968#0" expanded="true" />
-            <element signature="e#24358#24363#0" expanded="true" />
-            <element signature="e#24641#24659#0" expanded="true" />
-            <element signature="e#24878#24883#0" expanded="true" />
-            <element signature="e#25169#25187#0" expanded="true" />
-            <element signature="e#25273#25278#0" expanded="true" />
-            <element signature="e#25659#25664#0" expanded="true" />
-            <element signature="e#25965#25970#0" expanded="true" />
-            <element signature="e#26358#26363#0" expanded="true" />
-            <element signature="e#27210#27230#0" expanded="true" />
-            <element signature="e#27264#27282#0" expanded="true" />
-            <element signature="e#27395#27400#0" expanded="true" />
-            <element signature="e#27509#27530#0" expanded="true" />
-            <element signature="e#27613#27634#0" expanded="true" />
-            <element signature="e#27804#27846#0" expanded="true" />
-            <element signature="e#28182#28209#0" expanded="true" />
-            <element signature="e#28493#28519#0" expanded="true" />
-            <element signature="e#29336#29341#1" expanded="true" />
-            <element signature="e#29895#29914#0" expanded="true" />
-            <element signature="e#29967#29972#0" expanded="true" />
-            <element signature="e#30384#30406#0" expanded="true" />
-            <element signature="e#30723#30766#0" expanded="true" />
-            <element signature="e#30844#30866#0" expanded="true" />
-            <element signature="e#30973#31045#0" expanded="true" />
-            <element signature="e#31132#31152#0" expanded="true" />
-            <element signature="e#31442#31479#0" expanded="true" />
-            <element signature="e#31544#31564#0" expanded="true" />
-            <element signature="e#32089#32109#0" expanded="true" />
-            <element signature="e#33072#33109#0" expanded="true" />
-            <element signature="e#33643#33659#0" expanded="true" />
-            <element signature="e#34211#34283#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="275">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/myinfo/index.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/myinfo/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/level.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/levelRule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="2025">
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/participation/index.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/member/level/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="2575">
+          <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/op.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/goods/gudong.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2750">
-          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+        <state relative-caret-position="200">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/member/shareholderRule.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/gudong.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="75">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/agency.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="121" lean-forward="true" selection-start-line="4" selection-start-column="121" selection-end-line="4" selection-end-column="121" />
         </state>
       </provider>
     </entry>

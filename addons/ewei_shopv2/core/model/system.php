@@ -696,6 +696,10 @@ class System_EweiShopV2Model {
                         "route" => "levelRule"
                     ) ,
                     array(
+                        "title" => "代理描述",
+                        "route" => "levelDetails"
+                    ) ,
+                    array(
                         "title" => "股东列表",
                         "route" => "shareholder"
                     ),
@@ -703,6 +707,10 @@ class System_EweiShopV2Model {
                         "title" => "股东规则",
                         "route" => "shareholderRule"
                     ),
+                    array(
+                        "title" => "股东描述",
+                        "route" => "shareholderDetails"
+                    ) ,
                     array(
                         "title" => "会员提现",
                         "route" => "withdraw"

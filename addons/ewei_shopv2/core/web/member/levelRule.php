@@ -16,7 +16,7 @@ class LevelRule_EweiShopV2Page extends WebPage
     {
         global $_GPC;
 
-        $res = pdo_update('shop_agency_rule',array('agency_purchase_time'=>$_GPC['agency_purchase_time'],'agency_goodsid'=>$_GPC['agency_goodsid'],'agency_ratio'=>$_GPC['agency_ratio']));
+        $res = pdo_update('shop_agency_rule',array('agency_purchase_time'=>$_GPC['agency_purchase_time'],'agency_goodsid'=>$_GPC['agency_goodsid']));
 
         if ($res){
             exit(json_encode(array('code'=>0,'msg'=>'规则保存成功!')));
