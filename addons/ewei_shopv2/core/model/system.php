@@ -665,6 +665,10 @@ class System_EweiShopV2Model
 						array(
 							"title" => "购物税管理",
 							"route" => "tallage",
+						),
+						array(
+							"title" => "运费管理",
+							"route" => "freight",
 						)
 					)
 				),

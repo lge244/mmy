@@ -3,9 +3,9 @@ defined('IN_IA') or exit('Access Denied');
 
 $config = array();
 
-$config['db']['master']['host'] = '192.168.1.107';
-$config['db']['master']['username'] = 'root';
-$config['db']['master']['password'] = 'root';
+$config['db']['master']['host'] = '47.94.96.194';
+$config['db']['master']['username'] = 'hmj_j_yt_com';
+$config['db']['master']['password'] = 'yFa6eTRht4TwzPT2';
 $config['db']['master']['port'] = '3306';
 $config['db']['master']['database'] = 'hmj_j_yt_com';
 $config['db']['master']['charset'] = 'utf8';
