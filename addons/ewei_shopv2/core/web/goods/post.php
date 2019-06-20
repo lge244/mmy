@@ -322,6 +322,7 @@ if( $_W["ispost"] )
 	$data["ccates"] = implode(",", $ccates);
 	$data["tcates"] = implode(",", $tcates);
     $data["custodian_share"] = (int)intval($_GPC['custodian_share']);
+    $data["pcustodian_share"] = (int)intval($_GPC['pcustodian_share']);
 	$data["content"] = m("common")->html_images($_GPC["content"]);
 	$data["buycontent"] = m("common")->html_images($_GPC["buycontent"]);
 	if( p("commission") ) 

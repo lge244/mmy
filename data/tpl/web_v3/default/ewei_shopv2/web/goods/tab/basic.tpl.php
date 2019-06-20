@@ -113,6 +113,16 @@
                 <span class="help-block">管理人分润是购买此件商品，所在团队的管理人得到对应的分润比例</span>
             </div>
         </div>
+        <div class="form-group dispatch_info" >
+            <label class="col-sm-2 control-label">上级的上级所得分润</label>
+            <div class="col-sm-8">
+                <div class='input-group fixsingle-input-group'>
+                    <input type="number" name="pcustodian_share" value="<?php  echo $item['pcustodian_share'];?>" class="form-control"/>
+                    <span class="input-group-addon">%</span>
+                </div>
+                <span class="help-block">管理人的上级分润是购买此件商品，所在团队的管理人的上级得到对应的分润比例</span>
+            </div>
+        </div>
     </div>
 </div>
 
