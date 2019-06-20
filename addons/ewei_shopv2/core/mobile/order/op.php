@@ -77,6 +77,7 @@ class Op_EweiShopV2Page extends MobileLoginPage
         global $_W;
         global $_GPC;
         $orderid = intval($_GPC["id"]);
+        $member = m('member')->getMember($_W['openid'], true);
         $order = pdo_fetch("select id,status,openid,couponid,price,refundstate,refundid,ordersn,price from " . tablename("ewei_shop_order") . " where id=:id and uniacid=:uniacid and openid=:openid limit 1", array(":id" => $orderid, ":uniacid" => $_W["uniacid"], ":openid" => $_W["openid"]));
         if (empty($order)) {
             show_json(0, "订单未找到");
@@ -94,6 +95,24 @@ class Op_EweiShopV2Page extends MobileLoginPage
         }
 
         pdo_update("ewei_shop_order", array("status" => 3, "finishtime" => time(), "refundstate" => 0), array("id" => $order["id"], "uniacid" => $_W["uniacid"]));
+//确认收货，修改订单状态
+        //获取上级和上级的上级的服务费
+        if($member['fid']){
+            $commission = m("order")->shareCommission($orderid,$order['price']);
+
+            $info1 = pdo_get("ewei_shop_member",array('id'=>$member['fid']),array('brokerage','past_brokerage','share_money'));
+            //修改上级的分润佣金
+            pdo_update("ewei_shop_member",array('brokerage'=>$info1['brokerage'] + $commission['share2commission'],'past_brokerage'=>$info1['past_brokerage'] + $commission['share2commission'],'share_money'=>$info1['share_money'] + $commission['share2commission']),array('id'=>$member['fid']));
+            pdo_insert("share_record",array('uid'=>$member['id'],'fid'=>$member['fid'],'money'=>$commission['share2commission'],'type'=>0,'time'=>time()));
+            //
+            $f = pdo_get("ewei_shop_member",array('id'=>$member['fid']),array('fid'));
+            $info2 = pdo_get("ewei_shop_member",array('id'=>$f['fid']),array('brokerage','past_brokerage','share_money'));
+
+            if($f['fid']){
+                pdo_update("ewei_shop_member",array('brokerage'=>$info2['brokerage'] + $commission['share3commission'],'past_brokerage'=>$info2['past_brokerage'] + $commission['share3commission'],'share_money'=>$info2['share_money'] + $commission['share3commission']),array('id'=>$f['fid']));
+                pdo_insert("share_record",array('uid'=>$member['id'],'fid'=>$f['fid'],'money'=>$commission['share3commission'],'type'=>0,'time'=>time()));
+            }
+        }
 
         $price = pdo_get('ewei_shop_order_goods',array('orderid'=>$orderid),array('price','total'));
         $service = pdo_get('service');
