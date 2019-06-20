@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e549375-96b5-4cca-95c2-bf686547325a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods/freight.php" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods/freight.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tpl/app/ewei_shopv2/default/mobile/order/create.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/tpl/app/ewei_shopv2/default/mobile/order/create.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tpl/web_v3/default/ewei_shopv2/web/goods/freight.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/data/tpl/web_v3/default/ewei_shopv2/web/goods/freight.tpl.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,26 +34,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="139" column="62" selection-start-line="139" selection-start-column="62" selection-end-line="139" selection-end-column="62" />
+            <state relative-caret-position="296">
+              <caret line="981" selection-start-line="981" selection-end-line="981" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-492">
+              <caret line="533" column="24" selection-start-line="533" selection-start-column="24" selection-end-line="533" selection-end-column="24" />
               <folding>
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#32089#32109#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods/freight.php">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="353">
+              <caret line="505" selection-start-line="505" selection-end-line="505" />
+              <folding>
+                <element signature="e#124#719#0" />
+                <element signature="e#770#9387#0" />
+                <element signature="e#9428#9785#0" />
+                <element signature="e#9822#10074#0" />
+                <element signature="e#10111#14231#0" />
+                <element signature="e#14268#14409#0" />
+                <element signature="e#14444#21000#0" />
+                <element signature="e#24091#28180#0" />
+                <element signature="e#28223#34090#0" />
+                <element signature="e#34134#38950#0" />
+                <element signature="e#39011#40084#0" />
+                <element signature="e#40129#40693#0" />
+                <element signature="e#40751#41258#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="671" column="25" lean-forward="true" selection-start-line="668" selection-start-column="24" selection-end-line="671" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -78,6 +123,9 @@
       <find>fui-goods-item</find>
       <find>购物税</find>
       <find>$row</find>
+      <find>税收</find>
+      <find>totalprice</find>
+      <find>$dispatch_price</find>
     </findStrings>
     <replaceStrings>
       <replace>$v</replace>
@@ -95,9 +143,6 @@
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/admins/service.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/admins/service.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/account/index.php" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/create.php" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/op.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/myinfo/index.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/myinfo/index.html" />
@@ -117,10 +162,14 @@
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/goods/agency.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/template/mobile/default/index.html" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/template/mobile/default/template/tpl_goods.html" />
-        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" />
-        <option value="$PROJECT_DIR$/data/config.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods/freight.php" />
         <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/form.html" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php" />
+        <option value="$PROJECT_DIR$/data/config.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/create.php" />
+        <option value="$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html" />
       </list>
     </option>
   </component>
@@ -320,7 +369,7 @@
               <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -328,8 +377,53 @@
               <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="core" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="goods" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="order" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/www/mmy" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/www/mmy" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/www/mmy" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/www/mmy" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="biz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/www/mmy" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="static" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="biz" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="order" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -344,7 +438,7 @@
               <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="template" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web_v3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -352,8 +446,8 @@
               <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="template" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web_v3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="admins" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="default" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="mmy" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -361,8 +455,9 @@
               <item name="addons" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="ewei_shopv2" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="template" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="web_v3" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="goods" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mobile" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="default" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="order" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -380,17 +475,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight" />
-      <recent name="$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\WWW\mmy\addons\ewei_shopv2\template\mobile\default\goods" />
       <recent name="D:\WWW\mmy\addons\ewei_shopv2\core\mobile\goods" />
       <recent name="D:\WWW\mmy\addons\ewei_shopv2\static\js\dist" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight" />
+      <recent name="$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -421,18 +516,20 @@
       <workItem from="1560842461983" duration="9658000" />
       <workItem from="1560905028204" duration="1037000" />
       <workItem from="1560907912655" duration="3179000" />
-      <workItem from="1560911116633" duration="12505000" />
+      <workItem from="1560911116633" duration="12875000" />
+      <workItem from="1560994576085" duration="1262000" />
+      <workItem from="1560996238850" duration="8068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57117000" />
+    <option name="totallyTimeSpent" value="66817000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14444445" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16111112" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -457,39 +554,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/page/sys.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/menu/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/processor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-732">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/model.php.jiami">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4832">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/plugin/diypage/core/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -787,48 +851,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/config.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        <state relative-caret-position="468">
+          <caret line="94" column="103" selection-start-line="94" selection-start-column="103" selection-end-line="94" selection-end-column="103" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="670" column="41" selection-start-line="670" selection-start-column="41" selection-end-line="670" selection-end-column="41" />
+        <state relative-caret-position="271">
+          <caret line="133" column="79" lean-forward="true" selection-start-line="133" selection-start-column="79" selection-end-line="133" selection-end-column="79" />
           <folding>
-            <element signature="e#28228#33390#0#PHP" />
-            <element signature="e#28276#33385#0#PHP" />
-            <element signature="e#28299#30127#1#PHP" />
-            <element signature="e#30145#31305#1#PHP" />
-            <element signature="e#31323#32115#1#PHP" />
-            <element signature="e#33393#39041#0#PHP" />
-            <element signature="e#36488#37280#1#PHP" />
-            <element signature="e#39044#44206#0#PHP" />
-            <element signature="e#44209#46715#0#PHP" />
-            <element signature="e#44280#45440#1#PHP" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/web/goods/freight.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="1114">
+          <caret line="80" column="21" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/web_v3/goods/freight/index.html">
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/model/system.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="139" column="62" selection-start-line="139" selection-start-column="62" selection-end-line="139" selection-end-column="62" />
+        <state relative-caret-position="704">
+          <caret line="671" column="25" lean-forward="true" selection-start-line="668" selection-start-column="24" selection-end-line="671" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/static/js/app/biz/order/create.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="505" selection-start-line="505" selection-end-line="505" />
+          <folding>
+            <element signature="e#124#719#0" />
+            <element signature="e#770#9387#0" />
+            <element signature="e#9428#9785#0" />
+            <element signature="e#9822#10074#0" />
+            <element signature="e#10111#14231#0" />
+            <element signature="e#14268#14409#0" />
+            <element signature="e#14444#21000#0" />
+            <element signature="e#24091#28180#0" />
+            <element signature="e#28223#34090#0" />
+            <element signature="e#34134#38950#0" />
+            <element signature="e#39011#40084#0" />
+            <element signature="e#40129#40693#0" />
+            <element signature="e#40751#41258#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/core/mobile/order/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="981" selection-start-line="981" selection-end-line="981" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addons/ewei_shopv2/template/mobile/default/order/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-492">
+          <caret line="533" column="24" selection-start-line="533" selection-start-column="24" selection-end-line="533" selection-end-column="24" />
+          <folding>
+            <element signature="e#32089#32109#0" expanded="true" />
           </folding>
         </state>
       </provider>

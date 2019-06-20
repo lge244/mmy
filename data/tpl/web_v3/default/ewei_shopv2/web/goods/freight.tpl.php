@@ -97,7 +97,7 @@
 		<input type="hidden" name="r" value="goods.<?php  echo $goodsfrom;?>"/>
 		<div class="page-toolbar">
             <span class="pull-left" style="margin-right:30px;">
-                <a class='btn btn-sm btn-primary' href="<?php  echo webUrl('freight/add')?>"><i class='fa fa-plus'></i> 添加地区运费</a>
+                <a class='btn btn-sm btn-primary' href="<?php  echo webUrl('goods/freight/form')?>"><i class='fa fa-plus'></i> 添加地区运费</a>
             </span>
 		</div>
 	</form>
@@ -119,7 +119,7 @@
 				</tr>
 				</thead>
 				<tbody>
-				<?php  if(is_array($admins_list)) { foreach($admins_list as $v) { ?>
+				<?php  if(is_array($list)) { foreach($list as $v) { ?>
 				<tr>
 					<td><?php  echo $v['id'];?></td>
 					<td><?php  echo $v['address'];?></td>
@@ -128,16 +128,16 @@
 					<td><?php  echo $v['continued_weight'];?></td>
 					<td><?php  echo $v['first_weight_price'];?></td>
 					<td><?php  echo $v['continued_weight_price'];?></td>
-					<td><?php  echo date('Y-m-d', $v['create'])?></td>
+					<td><?php  echo date('Y-m-d', $v['create_time'])?></td>
 					<td>
 						<a class='btn  btn-op btn-operation'
-						   href="<?php  echo webUrl('admins/add', array('uid' => $v['id']))?>">
-                                   <span data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">
-                                        <i class='icow icow-bianji2'></i>
-                                   </span>
+						   href="<?php  echo webUrl('goods/freight/form', array('id' => $v['id']))?>">
+							<span data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">
+								<i class='icow icow-bianji2'></i>
+							</span>
 						</a>
 						<a class='btn  btn-op btn-operation' data-toggle='ajaxRemove'
-						   href="<?php  echo webUrl('admins/delete', array('id' => $v['id']))?>"
+						   href="<?php  echo webUrl('goods/freight/del', array('id' => $v['id']))?>"
 						   data-confirm='确认彻底删除此管理员？'>
 							<span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
 								<i class='icow icow-shanchu1'></i>
@@ -156,6 +156,5 @@
 	<!--</div>-->
 
 </div>
-<?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('goods/batchcates', TEMPLATE_INCLUDEPATH)) : (include template('goods/batchcates', TEMPLATE_INCLUDEPATH));?>
 <?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>
 

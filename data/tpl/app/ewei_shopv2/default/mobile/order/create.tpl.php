@@ -527,13 +527,22 @@
 <div class="fui-cell" id="showdispatchprice">
     <div class="fui-cell-label" >运费</div>
     <div class="fui-cell-info"></div>
-    <div class="fui-cell-remark noremark">&yen; <span class='<?php  if(!$packageid && empty($exchangeOrder)) { ?>dispatchprice<?php  } ?>'><?php  if(!empty($exchangeOrder)) { ?><?php  echo $exchangepostage;?><?php  } else if($taskgoodsprice) { ?><?php  echo $taskgoodsprice;?><?php  } else { ?><?php  echo price_format($dispatch_price,2)?><?php  } ?></span></div>
+    <div class="fui-cell-remark noremark">&yen; <span class='<?php  if(!$packageid && empty($exchangeOrder)) { ?>dispatchprice<?php  } ?>'>
+        <?php  if(!empty($exchangeOrder)) { ?>
+        <?php  echo $exchangepostage;?>
+        <?php  } else if($taskgoodsprice) { ?>
+        <?php  echo $taskgoodsprice;?>
+        <?php  } else { ?>
+        <?php  echo price_format($dispatch_price,2)?>
+        <?php  } ?>
+    </span></div>
 </div>
 <div class="fui-cell" id="aa">
     <div class="fui-cell-label" >税收</div>
     <div class="fui-cell-info"></div>
-    <div class="fui-cell-remark noremark">&yen; <span class='<?php  if(!$packageid && empty($exchangeOrder)) { ?>tallage<?php  } ?>'>
-        <?php  echo $tax['purchase_tax'];?></span></div>
+    <div class="fui-cell-remark noremark">&yen; <span id="purchase_tax" class='<?php  if(!$packageid && empty($exchangeOrder)) { ?>tallage<?php  } ?>'>
+       <?php  echo price_format($goodsprice * $tax['purchase_tax'] / 100,2)?>
+        </span></div>
 </div>
 <script>
     function getNumber(str) {
@@ -544,12 +553,12 @@
         return parseFloat(str.replace(',', ''))
     };
 
-    $(function () {
+    /*$(function () {
         var goodsprice = $('.goodsprice').html();
         var tallage = <?php  echo $tax['purchase_tax'];?>;
         var tallage_price = (goodsprice * tallage)/100;
         $('.tallage').html(tallage_price)
-    });
+    });*/
     $('.goodsprice').bind('DOMNodeInserted',function () {
         var goodsprice = getNumber($('.goodsprice').html());
         var tallage = <?php  echo $tax['purchase_tax'];?>;
@@ -615,7 +624,7 @@
     <a href="javascript:;" class="nav-item total">
         <p style="color: #000">
             需付：<span class="text-danger  bigprice">&yen; <span class="<?php  if(!$packageid && empty($exchangeOrder)) { ?>totalprice<?php  } ?>">
-                <?php  if(!empty($exchangeOrder)) { ?><?php  echo $exchangerealprice;?><?php  } else if($taskgoodsprice) { ?><?php  echo $taskgoodsprice;?><?php  } else { ?><?php  echo price_format($realprice,2)?><?php  } ?></span></span>
+                <?php  if(!empty($exchangeOrder)) { ?><?php  echo $exchangerealprice;?><?php  } else if($taskgoodsprice) { ?><?php  echo $taskgoodsprice;?><?php  } else { ?><?php  echo price_format($realprice + ($goodsprice * $tax['purchase_tax'] / 100), 2)?><?php  } ?></span></span>
         </p>
     </a>
     <a href="javascript:;" class="nav-item btn btn-danger buybtn">立即支付</a>

@@ -97,7 +97,7 @@
 		<input type="hidden" name="r" value="goods.{$goodsfrom}"/>
 		<div class="page-toolbar">
             <span class="pull-left" style="margin-right:30px;">
-                <a class='btn btn-sm btn-primary' href="{php echo webUrl('freight/form')}"><i class='fa fa-plus'></i> 添加地区运费</a>
+                <a class='btn btn-sm btn-primary' href="{php echo webUrl('goods/freight/form')}"><i class='fa fa-plus'></i> 添加地区运费</a>
             </span>
 		</div>
 	</form>
@@ -119,7 +119,7 @@
 				</tr>
 				</thead>
 				<tbody>
-				{loop $admins_list $v}
+				{loop $list $v}
 				<tr>
 					<td>{$v['id']}</td>
 					<td>{$v['address']}</td>
@@ -128,16 +128,16 @@
 					<td>{$v['continued_weight']}</td>
 					<td>{$v['first_weight_price']}</td>
 					<td>{$v['continued_weight_price']}</td>
-					<td>{php echo date('Y-m-d', $v['create'])}</td>
+					<td>{php echo date('Y-m-d', $v['create_time'])}</td>
 					<td>
 						<a class='btn  btn-op btn-operation'
-						   href="{php echo webUrl('freight/form', array('uid' => $v['id']))}">
+						   href="{php echo webUrl('goods/freight/form', array('id' => $v['id']))}">
 							<span data-toggle="tooltip" data-placement="top" title="" data-original-title="编辑">
 								<i class='icow icow-bianji2'></i>
 							</span>
 						</a>
 						<a class='btn  btn-op btn-operation' data-toggle='ajaxRemove'
-						   href="{php echo webUrl('freight/del', array('id' => $v['id']))}"
+						   href="{php echo webUrl('goods/freight/del', array('id' => $v['id']))}"
 						   data-confirm='确认彻底删除此管理员？'>
 							<span data-toggle="tooltip" data-placement="top" title="" data-original-title="删除">
 								<i class='icow icow-shanchu1'></i>
@@ -156,6 +156,5 @@
 	<!--</div>-->
 
 </div>
-{template 'goods/batchcates'}
 {template '_footer'}
 
