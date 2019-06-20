@@ -572,9 +572,6 @@
     <div class="fui-cell-info"></div>
     <div class="fui-cell-remark noremark">-&yen; <span id="coupondeduct_money">0</span></div>
 </div>
-</div>
-
-</div>
 <?php  if($isgift) { ?>
 <div id='gift-picker-modal' style="margin:-100%;">
     <div class='gift-picker'>
