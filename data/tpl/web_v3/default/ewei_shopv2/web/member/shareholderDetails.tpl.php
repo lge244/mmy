@@ -1,11 +1,12 @@
-<?php defined('IN_IA') or exit('Access Denied');?><?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_header', TEMPLATE_INCLUDEPATH)) : (include template('_header', TEMPLATE_INCLUDEPATH));?>
+<?php defined('IN_IA') or exit('Access Denied');?>
+<?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_header', TEMPLATE_INCLUDEPATH)) : (include template('_header', TEMPLATE_INCLUDEPATH));?>
 <script src="../addons/ewei_shopv2/static/js/dist/ueditor/ueditor.config.js" type="text/javascript"></script>
 <script src="../addons/ewei_shopv2/static/js/dist/ueditor/ueditor.all.js" type="text/javascript"></script>
 <div class="form-group">
     <label class="col-sm-1 control-label">股东描述：</label>
     <div class="input-group col-sm-7">
         <script id="editor" name="content" style="height:500px;" type="text/plain" >
-            <?php  if(empty($info.content)) { ?><?php  } else { ?><?php  echo $info['content'];?><?php  } ?>
+            <?php  if(empty($info.content)) { ?><?php  } else { ?><?php  echo htmlspecialchars_decode($info['content'])?><?php  } ?>
         </script>
     </div>
 </div>
