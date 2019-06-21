@@ -26,6 +26,27 @@
 			<div class="name" style="color: #000000;"><?php  echo htmlspecialchars_decode($info['content'])?></div>
 		</div>
 	</a>
+	<div style="text-align: center;margin-top: 20px;">
+		<a style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" id="btn">申请成为股东</a>
+	</div>
+
 	<?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('_copyright', TEMPLATE_INCLUDEPATH)) : (include template('_copyright', TEMPLATE_INCLUDEPATH));?>
 </div>
+<script>
+	$("#btn").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "<?php  echo MobileUrl('goods/gudong/add')?>",
+			dataType: "json",
+			success:function(res){
+				console.log(res);return;
+				if(res.code == 1){
+					alert(res.msg);
+				}else{
+					alert(res.msg);
+				}
+			}
+		});
+	});
+</script>
 <?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>

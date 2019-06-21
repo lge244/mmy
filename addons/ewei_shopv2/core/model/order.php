@@ -2201,14 +2201,14 @@ class Order_EweiShopV2Model
 		}
 	}
 
-	public function shareCommission($orderid,$price){
+	public function shareCommission($orderid){
 
         //根据订单id找到商品的id
-        $gid = pdo_get("ewei_shop_order_goods",array('orderid'=>$orderid),array('goodsid'));
+        $gid = pdo_get("ewei_shop_order_goods",array('orderid'=>$orderid),array('goodsid','price'));
         //通过商品id找到分销比例
-        $share = pdo_get("ewei_shop_goods",array('id'=>$gid['goodsid']),array('custodian_share','pcustodian_share'));
-        $share2commission = $price * $share['custodian_share'] * 0.01;
-        $share3commission = $price * $share['pcustodian_share'] * 0.01;
+        $share = pdo_get("ewei_shop_goods",array('id'=>$gid['goodsid']),array('price','custodian_share','pcustodian_share'));
+        $share2commission = $gid['price'] * $share['custodian_share'] * 0.01;
+        $share3commission = $gid['price'] * $share['pcustodian_share'] * 0.01;
         return ['share2commission'=>$share2commission,'share3commission'=>$share3commission];
 
     }
