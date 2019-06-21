@@ -527,13 +527,22 @@
 <div class="fui-cell" id="showdispatchprice">
     <div class="fui-cell-label" >运费</div>
     <div class="fui-cell-info"></div>
-    <div class="fui-cell-remark noremark">&yen; <span class='{if !$packageid && empty($exchangeOrder)}dispatchprice{/if}'>{if !empty($exchangeOrder)}{$exchangepostage}{elseif $taskgoodsprice}{$taskgoodsprice}{else}{php echo price_format($dispatch_price,2)}{/if}</span></div>
+    <div class="fui-cell-remark noremark">&yen; <span class='{if !$packageid && empty($exchangeOrder)}dispatchprice{/if}'>
+        {if !empty($exchangeOrder)}
+        {$exchangepostage}
+        {elseif $taskgoodsprice}
+        {$taskgoodsprice}
+        {else}
+        {php echo price_format($dispatch_price,2)}
+        {/if}
+    </span></div>
 </div>
 <div class="fui-cell" id="aa">
     <div class="fui-cell-label" >税收</div>
     <div class="fui-cell-info"></div>
-    <div class="fui-cell-remark noremark">&yen; <span class='{if !$packageid && empty($exchangeOrder)}tallage{/if}'>
-        {$tax['purchase_tax']}</span></div>
+    <div class="fui-cell-remark noremark">&yen; <span id="purchase_tax" class='{if !$packageid && empty($exchangeOrder)}tallage{/if}'>
+       {php echo price_format($goodsprice * $tax['purchase_tax'] / 100,2)}
+        </span></div>
 </div>
 <script>
     function getNumber(str) {
@@ -544,12 +553,12 @@
         return parseFloat(str.replace(',', ''))
     };
 
-    $(function () {
+    /*$(function () {
         var goodsprice = $('.goodsprice').html();
         var tallage = {$tax['purchase_tax']};
         var tallage_price = (goodsprice * tallage)/100;
         $('.tallage').html(tallage_price)
-    });
+    });*/
     $('.goodsprice').bind('DOMNodeInserted',function () {
         var goodsprice = getNumber($('.goodsprice').html());
         var tallage = {$tax['purchase_tax']};
@@ -562,9 +571,6 @@
     <div class="fui-cell-label" style='width:auto' id='coupondeduct_text' ></div>
     <div class="fui-cell-info"></div>
     <div class="fui-cell-remark noremark">-&yen; <span id="coupondeduct_money">0</span></div>
-</div>
-</div>
-
 </div>
 {if $isgift}
 <div id='gift-picker-modal' style="margin:-100%;">
@@ -615,7 +621,7 @@
     <a href="javascript:;" class="nav-item total">
         <p style="color: #000">
             需付：<span class="text-danger  bigprice">&yen; <span class="{if !$packageid && empty($exchangeOrder)}totalprice{/if}">
-                {if !empty($exchangeOrder)}{$exchangerealprice}{elseif $taskgoodsprice}{$taskgoodsprice}{else}{php echo price_format($realprice,2)}{/if}</span></span>
+                {if !empty($exchangeOrder)}{$exchangerealprice}{elseif $taskgoodsprice}{$taskgoodsprice}{else}{php echo price_format($realprice + ($goodsprice * $tax['purchase_tax'] / 100), 2)}{/if}</span></span>
         </p>
     </a>
     <a href="javascript:;" class="nav-item btn btn-danger buybtn">立即支付</a>
