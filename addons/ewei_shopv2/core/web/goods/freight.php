@@ -21,26 +21,63 @@ class Freight_EweiShopV2Page extends WebPage
 
 	public function form()
 	{
-		include $this->template();
+		global $_GPC;
+		$id = $_GPC['id'];
+		$info = pdo_get('ewei_shop_freight', ['id' => $id]);
+		$address = $this->address;
+		include($this->template());
 	}
 
 	public function save()
 	{
 		global $_GPC;
-		$purchase_tax = $_GPC['purchase_tax'];
-		if ($purchase_tax < 0) {
-			exit(json_encode(array('code' => 1, 'msg' => '购物税不能低于零')));
+		$id = $_GPC['id'];
+		$address = $_GPC['address'];
+		$distance_shipping = $_GPC['distance_shipping'];
+		$first_weight = $_GPC['first_weight'];
+		$continued_weight = $_GPC['continued_weight'];
+		$first_weight_price = $_GPC['first_weight_price'];
+		$continued_weight_price = $_GPC['continued_weight_price'];
+		if (empty($address) || empty($distance_shipping) || empty($first_weight) || empty($continued_weight) ||
+			empty($first_weight_price) || empty($continued_weight_price)) $this->message('请将信息填写完整');
+		if (!is_numeric($distance_shipping) || !is_numeric($first_weight) || !is_numeric($continued_weight) ||
+			!is_numeric($first_weight_price) || !is_numeric($continued_weight_price)) $this->message('参数不合法');
+		if (empty($id)) {
+			// 增加
+			$info = pdo_get('ewei_shop_freight', ['address' => $address]);
+			if ($info !== false) $this->message('该地址已经添加过');
+			$res = pdo_insert('ewei_shop_freight', [
+				'address'                => $address,
+				'distance_shipping'      => $distance_shipping,
+				'first_weight'           => $first_weight,
+				'continued_weight'       => $continued_weight,
+				'first_weight_price'     => $first_weight_price,
+				'continued_weight_price' => $continued_weight_price,
+				'create_time'            => time()
+			]);
+			if (!$res) $this->message('添加失败');
+			$this->message('添加成功', webUrl('goods/freight'));
+		} else {
+			// 编辑
+			$res = pdo_update('ewei_shop_freight', [
+				'address'                => $address,
+				'distance_shipping'      => $distance_shipping,
+				'first_weight'           => $first_weight,
+				'continued_weight'       => $continued_weight,
+				'first_weight_price'     => $first_weight_price,
+				'continued_weight_price' => $continued_weight_price
+			], ['id' => $id]);
+			if (!$res) $this->message('更新失败');
+			$this->message('更新成功', webUrl('goods/freight'));
 		}
-		$res = pdo_update('ewei_shop_purchase_tax', array('purchase_tax' => $purchase_tax));
-		if ($res) {
-			exit(json_encode(array('code' => 0, 'msg' => '设置成功')));
-		}
-		exit(json_encode(array('code' => 1, 'msg' => '设置失败！网络异常')));
 
 	}
 
 	public function del()
 	{
-
+		global $_GPC;
+		$id = $_GPC['id'];
+		pdo_delete('ewei_shop_freight', ['id' => $id]);
+		show_json(1);
 	}
 }

@@ -502,6 +502,7 @@ define(['core', 'tpl', 'biz/plugin/diyform', 'biz/order/invoice'], function (cor
         if (totalprice <= 0) {
             totalprice = 0
         }
+        totalprice = totalprice + parseFloat($("#purchase_tax").html());
         $('.totalprice').html(core.number_format(totalprice));
         modal.bindCoupon();
         return totalprice
