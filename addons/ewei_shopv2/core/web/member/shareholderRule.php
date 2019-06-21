@@ -16,7 +16,7 @@ class shareholderRule_EweiShopV2Page extends WebPage
     {
         global $_GPC;
 
-        $res = pdo_update('shop_shareholder_rule',array('shareholder_purchase_time'=>$_GPC['shareholder_purchase_time'],'shareholder_goodsid'=>$_GPC['shareholder_goodsid'],'shareholder_ratio'=>$_GPC['shareholder_ratio']));
+        $res = pdo_update('shop_shareholder_rule',array('shareholder_purchase_time'=>$_GPC['shareholder_purchase_time'],'shareholder_goodsid'=>$_GPC['shareholder_goodsid'],'shareholder_ratio'=>$_GPC['shareholder_ratio'],'pshareholder_ratio'=>$_GPC['pshareholder_ratio']));
 
         if ($res){
             exit(json_encode(array('code'=>0,'msg'=>'规则保存成功!')));
