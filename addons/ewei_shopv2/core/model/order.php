@@ -2201,14 +2201,25 @@ class Order_EweiShopV2Model
 		}
 	}
 
-	public function shareCommission($orderid){
-
+	public function shareCommission($orderid,$id){
+		$info = pdo_get("ewei_shop_member",array('id'=>$id),array('level'));
         //根据订单id找到商品的id
-        $gid = pdo_get("ewei_shop_order_goods",array('orderid'=>$orderid),array('goodsid','price'));
+        $gid = pdo_get("ewei_shop_order_goods",array('orderid'=>$orderid),array('goodsid'));
+      	$order = pdo_get("ewei_shop_order",array('id'=>$orderid),array('price'));
         //通过商品id找到分销比例
-        $share = pdo_get("ewei_shop_goods",array('id'=>$gid['goodsid']),array('price','custodian_share','pcustodian_share'));
-        $share2commission = $gid['price'] * $share['custodian_share'] * 0.01;
-        $share3commission = $gid['price'] * $share['pcustodian_share'] * 0.01;
+        $share = pdo_get("ewei_shop_goods",array('id'=>$gid['goodsid']),array('custodian_share','pcustodian_share','marketprice','discounts'));
+      	$share['discounts'] = json_decode($share['discounts']);
+        if($info['level'] == 5){
+              $share2commission = $share['discounts']['level5_pay'] * $share['custodian_share'] * 0.01;
+              $share3commission = $share['discounts']['level5_pay'] * $share['pcustodian_share'] * 0.01;
+        }elseif($info['level'] == 6){
+              $share2commission = $share['discounts']['level6_pay'] * $share['custodian_share'] * 0.01;
+              $share3commission = $share['discounts']['level6_pay'] * $share['pcustodian_share'] * 0.01;
+        }else{
+        	$share2commission = $share['marketprice'] * $share['custodian_share'] * 0.01;
+            $share3commission = $share['marketprice'] * $share['pcustodian_share'] * 0.01;
+        }
+       
         return ['share2commission'=>$share2commission,'share3commission'=>$share3commission];
 
     }
