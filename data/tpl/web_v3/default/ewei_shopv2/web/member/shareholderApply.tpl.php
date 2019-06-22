@@ -128,7 +128,7 @@
 <script>
     function pass(id) {
         $.post("<?php  echo webUrl('member/shareholderApply/pass')?>",{id:id},function (res) {
-            if (res.code == 0){
+            if (res.code == 1){
                 tip.msgbox.suc(res.msg);
                 window.location.reload();
             }else{
