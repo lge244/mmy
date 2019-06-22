@@ -6,7 +6,15 @@ if (!defined('IN_IA')) {
 class Gudong_EweiShopV2Page extends MobilePage
 {
     public function main(){
+        global $_W;
         $info = pdo_get('content',array('id'=>2),array('content'));
+        $member = m('member')->getMember($_W['openid'], true);
+
+        $ids = pdo_get("shop_shareholder_rule", array(), array('shareholder_goodsid'));
+        $sids = json_decode($ids['shareholder_goodsid'],true);
+        for($i = 0;$i < count($sids);$i ++){
+            $goods[] = pdo_get("ewei_shop_goods",array('id'=>$sids[$i]),array('id','title','thumb','marketprice'));
+        }
 
         include $this->template();
     }

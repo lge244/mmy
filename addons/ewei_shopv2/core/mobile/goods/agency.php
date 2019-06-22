@@ -1,16 +1,35 @@
 <?php
 if (!defined('IN_IA')) {
-	exit('Access Denied');
+    exit('Access Denied');
 }
 
 class Agency_EweiShopV2Page extends MobilePage
 {
-	public function main()
-	{
-		$info = pdo_get('content', array('id' => 1), array('content'));
-		$ids = pdo_get("ewei_shop_member_level", array('uniacid' => 2), array('goodsid'));
-		$goods = pdo_get("ewei_shop_goods", array('id' => $ids['goodsid']));
-		include $this->template();
-	}
+    public function main()
+    {
+        global $_W;
+        $member = m('member')->getMember($_W['openid'], true);
+        if($member['level'] != 6){
+            $info = pdo_get('content', array('id' => 1), array('content'));
+            if($member['level'] == 5){
+                $ids = pdo_get("shop_agency_rule", array(), array('agency_goodsid'));
+                $gids = json_decode($ids['agency_goodsid'],true);
+                for($i = 0;$i < count($gids);$i ++){
+                    $goods[] = pdo_get("ewei_shop_goods",array('id'=>$gids[$i]),array('id','title','thumb','marketprice'));
+                }
+            }else{
+                $ids = pdo_get("ewei_shop_member_level", array('uniacid' => 2,'level'=>1), array('goodsid'));
+                $gids = json_decode($ids['goodsid'],true);
+                for($i = 0;$i < count($gids);$i ++){
+                    $goods[] = pdo_get("ewei_shop_goods",array('id'=>$gids[$i]),array('id','title','thumb','marketprice'));
+                }
+            }
+            include $this->template();
+        }else{
+            echo "<script>alert('你已经成为股东！');history.go(-1);</script>";
+        }
+
+
+    }
 
 }
