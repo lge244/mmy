@@ -60,7 +60,9 @@ class Level_EweiShopV2Page extends WebPage
 		$id = trim($_GPC['id']);
 		$set = m('common')->getSysset();
 		$setdata = pdo_fetch('select * from ' . tablename('ewei_shop_sysset') . ' where uniacid=:uniacid limit 1', array(':uniacid' => $_W['uniacid']));
-		$goods = pdo_getall('ewei_shop_goods',array('status'=>1,'deleted'=>0),array('id','title'));
+		$goods = pdo_getall('ewei_shop_goods',array('nosearch' => 1),array('id','title'));
+		$agency_rule = pdo_get('ewei_shop_member_level', ['id' => $id], 'goodsid');
+		$agency_rule_arr = json_decode($agency_rule['goodsid'], true);
 		if ($id == 'default') {
 			$level = array('id' => 'default', 'levelname' => empty($set['shop']['levelname']) ? '普通等级' : $set['shop']['levelname'], 'discount' => $set['shop']['leveldiscount'], 'ordermoney' => 0, 'ordercount' => 0);
 		}
@@ -78,7 +80,7 @@ class Level_EweiShopV2Page extends WebPage
 
 		if ($_W['ispost']) {
 			$enabled = intval($_GPC['enabled']);
-			$data = array('uniacid' => $_W['uniacid'], 'level' => intval($_GPC['level']), 'levelname' => trim($_GPC['levelname']), 'ordercount' => intval($_GPC['ordercount']), 'ordermoney' => $_GPC['ordermoney'], 'discount' => trim($_GPC['discount']), 'enabled' => $enabled,'goodsid'=>$_GPC['product']);
+			$data = array('uniacid' => $_W['uniacid'], 'level' => intval($_GPC['level']), 'levelname' => trim($_GPC['levelname']), 'ordercount' => intval($_GPC['ordercount']), 'ordermoney' => $_GPC['ordermoney'], 'discount' => trim($_GPC['discount']), 'enabled' => $enabled,'goodsid'=>json_encode($_GPC['product']));
 			$goodsids = iserializer($_GPC['goodsids']);
 			$buygoods = intval($_GPC['buygoods']);
 
@@ -116,7 +118,6 @@ class Level_EweiShopV2Page extends WebPage
 			$level_array[$i] = $i;
 			++$i;
 		}
-
 		include $this->template();
 	}
 
