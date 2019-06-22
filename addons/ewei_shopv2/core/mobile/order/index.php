@@ -357,7 +357,8 @@ class Index_EweiShopV2Page extends MobileLoginPage
 		$orderid = intval($_GPC["id"]);
 		$ispeerpay = m("order")->checkpeerpay($orderid);
 		$isshow = $_GPC["isshow"];
-		if( empty($orderid) ) 
+		$purchase = pdo_get('ewei_shop_purchase_tax');
+      	if( empty($orderid) ) 
 		{
 			header("location: " . mobileUrl("order"));
 			exit();
@@ -740,6 +741,8 @@ class Index_EweiShopV2Page extends MobileLoginPage
 				$seckill_color = $diypage["seckill_color"];
 			}
 		}
+      	$purchase_tax = $order['goodsprice']*$purchase['purchase_tax'] /100;
+          
 		include($this->template());
 	}
 	public function express() 
