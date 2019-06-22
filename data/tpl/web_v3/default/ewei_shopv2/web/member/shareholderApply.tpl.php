@@ -110,9 +110,7 @@
                     <td><?php  echo date('Y-m-d',$row['time'])?></td>
                     <td>
                         <a  class='btn  btn-op btn-operation' onclick="pass(<?php  echo $row['id'];?>)" href="#">
-                                   <span data-toggle="tooltip" data-placement="top" title="" data-original-title="通过">
-                                        <i class='icow icow-bianji2'></i>
-                                   </span>
+                                   <span>通过</span>
                         </a>
                     </td>
                 </tr>
@@ -128,7 +126,7 @@
 <script>
     function pass(id) {
         $.post("<?php  echo webUrl('member/shareholderApply/pass')?>",{id:id},function (res) {
-            if (res.code == 0){
+            if (res.code == 1){
                 tip.msgbox.suc(res.msg);
                 window.location.reload();
             }else{
