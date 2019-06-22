@@ -3,11 +3,11 @@ defined('IN_IA') or exit('Access Denied');
 
 $config = array();
 
-$config['db']['master']['host'] = '47.94.96.194';
-$config['db']['master']['username'] = 'hmj_j_yt_com';
-$config['db']['master']['password'] = 'yFa6eTRht4TwzPT2';
+$config['db']['master']['host'] = '127.0.0.1';
+$config['db']['master']['username'] = 'root';
+$config['db']['master']['password'] = 'root';
 $config['db']['master']['port'] = '3306';
-$config['db']['master']['database'] = 'hmj_j_yt_com';
+$config['db']['master']['database'] = 'mmy';
 $config['db']['master']['charset'] = 'utf8';
 $config['db']['master']['pconnect'] = 0;
 $config['db']['master']['tablepre'] = 'ims_';

@@ -9,8 +9,11 @@ class Index_EweiShopV2Page extends MobilePage
 	{
 		global $_W;
 		global $_GPC;
+		$member = m('member')->getMember($_W['openid'], true);
+
 		$_SESSION['newstoreid'] = 0;
 		$this->diypage('home');
+
 		$trade = m('common')->getSysset('trade');
 
 		if (empty($trade['shop_strengthen'])) {

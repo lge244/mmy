@@ -42,8 +42,8 @@
                 </div>
                 <div class="child">
                    <a href="<?php  echo mobileUrl('member/team',array('id'=>$member['id']))?>">
-                        <div class="title">团队人数</div>
-                        <div class="num"><?php  echo number_format($member['invite'],0)?>人</div>
+                        <div class="title">我的团队</div>
+<!--                        <div class="num"><?php  echo number_format($member['invite'],0)?>人</div>-->
                     </a>
                 </div>
             </div>
