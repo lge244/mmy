@@ -488,7 +488,7 @@
                 <div class="fui-cell-text" style="white-space: normal;">
                     <div class="sale-line">
                         <span class="sale-tip"><?php  echo $level['levelname'];?></span>
-                        可享受 <span class="text-danger">&yen;<?php  echo $memberprice;?></span> 的价格
+                        可享受 <span class="text-danger" style="font-size: 20px">&yen;<?php  echo $memberprice;?></span> 的价格
                     </div>
                 </div>
             </div>

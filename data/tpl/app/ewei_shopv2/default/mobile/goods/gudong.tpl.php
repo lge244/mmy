@@ -39,13 +39,16 @@
 			url: "<?php  echo MobileUrl('goods/gudong/add')?>",
 			dataType: "json",
 			success:function(res){
-				console.log(res);return;
+              console.log('1'+res);
 				if(res.code == 1){
 					alert(res.msg);
 				}else{
 					alert(res.msg);
 				}
-			}
+			},
+          	error:function(XML,HTTP){
+            	alert(1);
+            }
 		});
 	});
 </script>
