@@ -8,7 +8,7 @@ class Index_EweiShopV2Page extends MobilePage
     public function main()
     {
         $time = $this->getNextMonthDays(date('Y-m-d'));
-        $member_num = count(pdo_getall('ewei_shop_member', array('shareholder' => 1)));
+        $member_num = count(pdo_getall('ewei_shop_member', array('level' => 6)));
         $m_order = pdo_getall('ewei_shop_order', array('status' => 3, 'paytime >' => strtotime($time[0]), 'paytime <=' => strtotime($time[1])), array('price'));
         $count = 0;
         foreach ($m_order as $k => $v) {

@@ -110,9 +110,7 @@
                     <td><?php  echo date('Y-m-d',$row['time'])?></td>
                     <td>
                         <a  class='btn  btn-op btn-operation' onclick="pass(<?php  echo $row['id'];?>)" href="#">
-                                   <span data-toggle="tooltip" data-placement="top" title="" data-original-title="通过">
-                                        <i class='icow icow-bianji2'></i>
-                                   </span>
+                                   <span>通过</span>
                         </a>
                     </td>
                 </tr>
