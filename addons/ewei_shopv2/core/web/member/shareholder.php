@@ -7,7 +7,7 @@ class Shareholder_EweiShopV2Page extends WebPage
 {
     public function main()
     {
-        $member = pdo_getall('ewei_shop_member', array('shareholder' => 1));
+        $member = pdo_getall('ewei_shop_member', array('level' => 6));
 
         include $this->template();
     }

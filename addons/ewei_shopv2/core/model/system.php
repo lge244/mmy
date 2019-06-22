@@ -744,6 +744,10 @@ class System_EweiShopV2Model
 							"route" => "shareholder"
 						),
 						array(
+							"title" => "股东申请列表",
+							"route" => "shareholderApply"
+						),
+						array(
 							"title" => "股东规则",
 							"route" => "shareholderRule"
 						),
