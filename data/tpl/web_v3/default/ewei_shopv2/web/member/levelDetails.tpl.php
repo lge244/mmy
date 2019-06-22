@@ -5,7 +5,7 @@
     <label class="col-sm-1 control-label">代理描述：</label>
     <div class="input-group col-sm-7">
         <script id="editor" name="content" style="height:500px;" type="text/plain" >
-            <?php  if(empty($info.content)) { ?><?php  } else { ?><?php  echo htmlspecialchars_decode($info['content'])?><?php  } ?>
+            <?php  echo htmlspecialchars_decode($info['content'])?>
         </script>
     </div>
 </div>

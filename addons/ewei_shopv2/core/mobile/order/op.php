@@ -79,7 +79,8 @@ class Op_EweiShopV2Page extends MobileLoginPage
         $orderid = intval($_GPC["id"]);
         $member = m('member')->getMember($_W['openid'], true);
         $order = pdo_fetch("select id,status,openid,couponid,price,refundstate,refundid,ordersn,price from " . tablename("ewei_shop_order") . " where id=:id and uniacid=:uniacid and openid=:openid limit 1", array(":id" => $orderid, ":uniacid" => $_W["uniacid"], ":openid" => $_W["openid"]));
-        if (empty($order)) {
+        
+      if (empty($order)) {
             show_json(0, "订单未找到");
         }
 
@@ -98,13 +99,14 @@ class Op_EweiShopV2Page extends MobileLoginPage
 //确认收货，修改订单状态
         //获取上级和上级的上级的服务费
         if($member['fid']){
-            $commission = m("order")->shareCommission($orderid,$order['price']);
-
+            $commission = m("order")->shareCommission($orderid,$member['id']);
             $info1 = pdo_get("ewei_shop_member",array('id'=>$member['fid']),array('brokerage','past_brokerage','share_money'));
             //修改上级的分润佣金
             pdo_update("ewei_shop_member",array('brokerage'=>$info1['brokerage'] + $commission['share2commission'],'past_brokerage'=>$info1['past_brokerage'] + $commission['share2commission'],'share_money'=>$info1['share_money'] + $commission['share2commission']),array('id'=>$member['fid']));
-            pdo_insert("share_record",array('uid'=>$member['id'],'fid'=>$member['fid'],'money'=>$commission['share2commission'],'type'=>0,'time'=>time()));
-            //
+           
+          	pdo_insert("share_record",array('uid'=>$member['id'],'fid'=>$member['fid'],'money'=>$commission['share2commission'],'type'=>0,'time'=>time()));
+          	
+          //
             $f = pdo_get("ewei_shop_member",array('id'=>$member['fid']),array('fid'));
             $info2 = pdo_get("ewei_shop_member",array('id'=>$f['fid']),array('brokerage','past_brokerage','share_money'));
 
@@ -143,27 +145,7 @@ class Op_EweiShopV2Page extends MobileLoginPage
                 }
             }
         }
-        if ($_W['ewei_shopv2_member']['fid'] > 0) {
-            $member = pdo_get('ewei_shop_member', array('id' => $_W['ewei_shopv2_member']['fid']));
-            if ($member['expiration_time'] > time()) {
-                $info = pdo_get('ewei_shop_order_goods', array('orderid' => $order['id']), array('goodsid', 'price'));
-                $goods = pdo_get('ewei_shop_goods', array('id' => $info['goodsid']), array('custodian_share'));
-                if ($goods) {
-                    $brokerage = $member['brokerage'] + ($order['price'] * $goods['custodian_share'] / 100);
-                    $past_brokerage = $member['past_brokerage'] + ($order['price'] * $goods['custodian_share'] / 100);
-                    $share_money = $member['share_money'] + ($order['price'] * $goods['custodian_share'] / 100);
-                    $a = pdo_update('ewei_shop_member', array('brokerage ' => $brokerage, 'share_money' => $share_money, 'past_brokerage' => $past_brokerage), array('id' => $_W['ewei_shopv2_member']['fid']));
-                    if ($a > 0) {
-                        $data['uid'] = $_W['ewei_shopv2_member']['id'];
-                        $data['fid'] = $_W['ewei_shopv2_member']['fid'];
-                        $data['type'] = 0;
-                        $data['money'] = ($order['price'] * $goods['custodian_share'] / 100);
-                        $data['time'] = time();
-                        pdo_insert('share_record', $data);
-                    }
-                }
-            }
-        }
+        
 
 
 

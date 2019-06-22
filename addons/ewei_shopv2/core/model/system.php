@@ -614,6 +614,28 @@ class System_EweiShopV2Model
 						)
 					)
 				),
+              	"store" => array(
+                    "title" => "门店",
+                    "subtitle" => "门店",
+                    "icon" => "mendianguanli",
+                    "items" => array(
+                        array(
+                            "title" => "门店管理",
+                            "items" => array(
+                                array(
+                                    "title" => "门店管理",
+                                    "route" => "",
+                                    "extends" => array(
+                                        "store.diypage.settings",
+                                        "store.diypage.page",
+                                        "store.goods",
+                                        "store.goods.goodsoption"
+                                    )
+                                )
+                            )
+                        ),
+                    )
+                ),
 				"goods"  => array(
 					"title"    => "商品",
 					"subtitle" => "商品管理",

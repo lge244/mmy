@@ -7,7 +7,6 @@ class LevelDetails_EweiShopV2Page extends WebPage
 {
     public function main(){
         $info = pdo_get("content",array('id'=>1),array('content'));
-        dump(htmlspecialchars_decode($info['content']));
         include $this->template();
     }
 

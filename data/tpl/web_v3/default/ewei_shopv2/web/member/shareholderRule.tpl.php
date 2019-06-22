@@ -40,6 +40,11 @@
                 <input type="number" name="shareholder_purchase_time" id="shareholder_ratio" class="form-control" value="<?php  echo $agency_rule['shareholder_ratio'];?>"/>
                 <span class='input-group-addon'>%</span>
             </div>
+            <div class='input-group fixsingle-input-group' style="margin-top: 5px;">
+                <span class='input-group-addon'>上级提成</span>
+                <input type="number" name="shareholder_purchase_time" id="pshareholder_ratio" class="form-control" value="<?php  echo $agency_rule['pshareholder_ratio'];?>"/>
+                <span class='input-group-addon'>%</span>
+            </div>
         </div>
     </div>
 
@@ -56,8 +61,9 @@
     $('.submit').click(function () {
         var shareholder_purchase_time = $('#shareholder_purchase_time').val();
         var shareholder_ratio = $('#shareholder_ratio').val();
+        var pshareholder_ratio = $('#pshareholder_ratio').val();
         var shareholder_goodsid = $('#shareholder_goodsid option:selected').val();
-        if (shareholder_purchase_time == 0 || shareholder_goodsid == 0 || shareholder_ratio == 0){
+        if (shareholder_purchase_time == 0 || shareholder_goodsid == 0 || shareholder_ratio == 0 || pshareholder_ratio == 0){
             tip.msgbox.suc("规则信息请填写完整！");
             return false;
         }
@@ -66,6 +72,7 @@
             "shareholder_purchase_time":shareholder_purchase_time,
             "shareholder_goodsid":shareholder_goodsid,
             "shareholder_ratio":shareholder_ratio,
+            "pshareholder_ratio":pshareholder_ratio,
         },function (res) {
             if(res.code == 0){
                 tip.msgbox.suc(res.msg)

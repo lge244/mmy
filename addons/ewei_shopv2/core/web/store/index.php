@@ -72,13 +72,13 @@ class Index_EweiShopV2Page extends ComWebPage
 				$perms = '';
 			}
 
-			if (empty($_GPC['logo'])) {
+			/*if (empty($_GPC['logo'])) {
 				show_json(0, '门店LOGO不能为空');
-			}
+			}*/
 
-			if (empty($_GPC['map']['lng']) || empty($_GPC['map']['lat'])) {
+			/*if (empty($_GPC['map']['lng']) || empty($_GPC['map']['lat'])) {
 				show_json(0, '门店位置不能为空');
-			}
+			}*/
 
 			if (empty($_GPC['address'])) {
 				show_json(0, '门店地址不能为空');
@@ -154,7 +154,7 @@ class Index_EweiShopV2Page extends ComWebPage
 				}
 			}
 
-			$data = array('uniacid' => $_W['uniacid'], 'storename' => trim($_GPC['storename']), 'address' => trim($_GPC['address']), 'province' => trim($_GPC['province']), 'city' => trim($_GPC['city']), 'area' => trim($_GPC['area']), 'provincecode' => trim($_GPC['chose_province_code']), 'citycode' => trim($_GPC['chose_city_code']), 'areacode' => trim($_GPC['chose_area_code']), 'tel' => trim($_GPC['tel']), 'lng' => $_GPC['map']['lng'], 'lat' => $_GPC['map']['lat'], 'type' => intval($_GPC['type']), 'realname' => trim($_GPC['realname']), 'mobile' => trim($_GPC['mobile']), 'label' => $label, 'tag' => $tag, 'fetchtime' => trim($_GPC['fetchtime']), 'saletime' => trim($_GPC['saletime']), 'logo' => save_media($_GPC['logo']), 'desc' => trim($_GPC['desc']), 'opensend' => intval($_GPC['opensend']), 'status' => intval($_GPC['status']), 'cates' => $cates, 'perms' => $perms);
+			$data = array('uniacid' => $_W['uniacid'], 'storename' => trim($_GPC['storename']), 'address' => trim($_GPC['address']), 'province' => trim($_GPC['province']), 'city' => trim($_GPC['city']), 'area' => trim($_GPC['area']), 'provincecode' => trim($_GPC['chose_province_code']), 'citycode' => trim($_GPC['chose_city_code']), 'areacode' => trim($_GPC['chose_area_code']), 'tel' => trim($_GPC['tel']), 'lng' => $_GPC['map']['lng'], 'lat' => $_GPC['map']['lat'], 'type' => intval($_GPC['type']), 'realname' => trim($_GPC['realname']), 'mobile' => trim($_GPC['mobile']), 'label' => $label, 'tag' => $tag, 'fetchtime' => trim($_GPC['fetchtime']), 'saletime' => trim($_GPC['saletime']), 'logo' => @save_media($_GPC['logo']), 'desc' => trim($_GPC['desc']), 'opensend' => intval($_GPC['opensend']), 'status' => intval($_GPC['status']), 'cates' => $cates, 'perms' => $perms);
 
 			if (P('newstore')) {
 				$data['storegroupid'] = intval($_GPC['storegroupid']);
