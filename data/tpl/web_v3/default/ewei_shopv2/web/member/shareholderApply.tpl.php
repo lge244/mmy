@@ -78,7 +78,7 @@
     }
 </style>
 <div class="page-header">
-    当前位置：<span class="text-primary">学员课程列表</span>
+    当前位置：<span class="text-primary">股东申请列表</span>
 </div>
 <div class="page-content">
 
@@ -106,8 +106,8 @@
                 <?php  if(is_array($member)) { foreach($member as $row) { ?>
                 <tr>
                     <td><?php  echo $row['mobile'];?></td>
-                    <td><?php  if(($row['realname'] == '')) { ?><?php  echo $row['nickname'];?><?php  } else { ?><?php  echo $row['realname'];?><?php  } ?></td>
-                    <td><?php  echo date('Y-m-d',$row['shareholder_time'])?></td>
+                    <td><?php  echo $row['nickname'];?></td>
+                    <td><?php  echo date('Y-m-d',$row['time'])?></td>
                     <td>
                         <a  class='btn  btn-op btn-operation' onclick="pass(<?php  echo $row['id'];?>)" href="#">
                                    <span data-toggle="tooltip" data-placement="top" title="" data-original-title="通过">
@@ -127,13 +127,13 @@
 <?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>
 <script>
     function pass(id) {
-       $.post("<?php  echo webUrl('training/pass')?>",{id:id},function (res) {
-          if (res.code == 0){
-              tip.msgbox.suc(res.msg);
-              window.location.reload();
-          }else{
-              tip.msgbox.err(res.msg);
-          }
-       },'json')
+        $.post("<?php  echo webUrl('member/shareholderApply/pass')?>",{id:id},function (res) {
+            if (res.code == 0){
+                tip.msgbox.suc(res.msg);
+                window.location.reload();
+            }else{
+                tip.msgbox.err(res.msg);
+            }
+        },'json')
     }
 </script>

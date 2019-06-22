@@ -1,4 +1,4 @@
-<?php defined('IN_IA') or exit('Access Denied');?><?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_header', TEMPLATE_INCLUDEPATH)) : (include template('_header', TEMPLATE_INCLUDEPATH));?>
+{template '_header'}
 <style>
     tbody tr td {
         position: relative;
@@ -78,7 +78,7 @@
     }
 </style>
 <div class="page-header">
-    当前位置：<span class="text-primary">学员课程列表</span>
+    当前位置：<span class="text-primary">股东申请列表</span>
 </div>
 <div class="page-content">
 
@@ -88,7 +88,7 @@
         <input type="hidden" name="a" value="entry"/>
         <input type="hidden" name="m" value="ewei_shopv2"/>
         <input type="hidden" name="do" value="web"/>
-        <input type="hidden" name="r" value="goods.<?php  echo $goodsfrom;?>"/>
+        <input type="hidden" name="r" value="goods.{$goodsfrom}"/>
 
     </form>
     <div class="row">
@@ -103,37 +103,37 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php  if(is_array($member)) { foreach($member as $row) { ?>
+                {loop $member $row}
                 <tr>
-                    <td><?php  echo $row['mobile'];?></td>
-                    <td><?php  if(($row['realname'] == '')) { ?><?php  echo $row['nickname'];?><?php  } else { ?><?php  echo $row['realname'];?><?php  } ?></td>
-                    <td><?php  echo date('Y-m-d',$row['shareholder_time'])?></td>
+                    <td>{$row['mobile']}</td>
+                    <td>{$row['nickname']}</td>
+                    <td>{php echo date('Y-m-d',$row['time'])}</td>
                     <td>
-                        <a  class='btn  btn-op btn-operation' onclick="pass(<?php  echo $row['id'];?>)" href="#">
+                        <a  class='btn  btn-op btn-operation' onclick="pass({$row['id']})" href="#">
                                    <span data-toggle="tooltip" data-placement="top" title="" data-original-title="通过">
                                         <i class='icow icow-bianji2'></i>
                                    </span>
                         </a>
                     </td>
                 </tr>
-                <?php  } } ?>
+                {/loop}
                 </tbody>
             </table>
         </div>
     </div>
 
 </div>
-<?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('goods/batchcates', TEMPLATE_INCLUDEPATH)) : (include template('goods/batchcates', TEMPLATE_INCLUDEPATH));?>
-<?php (!empty($this) && $this instanceof WeModuleSite || 1) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>
+{template 'goods/batchcates'}
+{template '_footer'}
 <script>
     function pass(id) {
-       $.post("<?php  echo webUrl('training/pass')?>",{id:id},function (res) {
-          if (res.code == 0){
-              tip.msgbox.suc(res.msg);
-              window.location.reload();
-          }else{
-              tip.msgbox.err(res.msg);
-          }
-       },'json')
+        $.post("{php echo webUrl('member/shareholderApply/pass')}",{id:id},function (res) {
+            if (res.code == 1){
+                tip.msgbox.suc(res.msg);
+                window.location.reload();
+            }else{
+                tip.msgbox.err(res.msg);
+            }
+        },'json')
     }
 </script>

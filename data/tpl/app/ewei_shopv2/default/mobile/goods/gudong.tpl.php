@@ -26,7 +26,7 @@
 			<div class="name" style="color: #000000;"><?php  echo htmlspecialchars_decode($info['content'])?></div>
 		</div>
 	</a>
-	<?php  if($member['level'] == 6) { ?>
+	<?php  if($member['level'] != 6) { ?>
 	<div style="text-align: center;margin-top: 20px;">
 		<a style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" id="btn">申请成为股东</a>
 	</div>
@@ -56,16 +56,12 @@
 			url: "<?php  echo MobileUrl('goods/gudong/add')?>",
 			dataType: "json",
 			success:function(res){
-              console.log('1'+res);
 				if(res.code == 1){
 					alert(res.msg);
 				}else{
 					alert(res.msg);
 				}
-			},
-          	error:function(XML,HTTP){
-            	alert(1);
-            }
+			}
 		});
 	});
 </script>

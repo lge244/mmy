@@ -30,7 +30,7 @@ class Gudong_EweiShopV2Page extends MobilePage
         $data['time'] = time();
         $data['mobile'] = $_W['ewei_shopv2_member']['mobile'];
       	$result = pdo_get("gudong_apply",array('uid'=>$uid['id']),array('id'));
-        if($result){
+        if(!$result){
             $res = pdo_insert("gudong_apply",$data);
             if($res){
                 exit(json_encode(['code'=>1,'msg'=>"申请成功,请等待后台审核"]));
