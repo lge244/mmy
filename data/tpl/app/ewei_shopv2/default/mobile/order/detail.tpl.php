@@ -248,12 +248,6 @@
 
 
 
-						<?php  if($order['refundstate'] > 0) { ?>
-
-							(<?php  if($order['status'] ==1) { ?>申请退款<?php  } else { ?>申请售后<?php  } ?>中)
-
-						<?php  } ?>
-
 
 
 						<?php  if($order['refundid'] !=0) { ?>
@@ -1051,11 +1045,11 @@
 
 			<?php  } ?>
           <div class="fui-cell">
-				<div class="fui-cell-label">运费</div>
+				<div class="fui-cell-label">税费</div>
 				<div class="fui-cell-info">
 				</div>
 				<div class="fui-cell-remark noremark">
-					&yen; <?php  echo $order['dispatchprice'];?>
+					&yen; <?php  echo $purchase_tax;?>
 				</div>
 			</div>
 
@@ -1605,11 +1599,7 @@
 
 
 
-				<?php  if($order['canrefund']) { ?>
-
-					<a data-nocache="true" class="btn btn-sm btn-default-o" href="<?php  echo mobileUrl('order/refund',array('id'=>$order['id']))?>"><?php  if(!empty($order['refundstate'])) { ?>查看<?php  } else { ?>申请退款<?php  } ?><?php  if(!empty($order['refundstate'])) { ?>进度<?php  } ?></a>
-
-				<?php  } ?>
+				
 
 
 

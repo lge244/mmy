@@ -248,12 +248,6 @@
 
 
 
-						{if $order['refundstate'] > 0}
-
-							({if $order['status'] ==1}申请退款{else}申请售后{/if}中)
-
-						{/if}
-
 
 
 						{if  $order['refundid'] !=0}
@@ -1055,7 +1049,7 @@
 				<div class="fui-cell-info">
 				</div>
 				<div class="fui-cell-remark noremark">
-					&yen; {$order['dispatchprice']}
+					&yen; {$purchase_tax}
 				</div>
 			</div>
 
@@ -1605,11 +1599,7 @@
 
 
 
-				{if $order['canrefund']}
-
-					<a data-nocache="true" class="btn btn-sm btn-default-o" href="{php echo mobileUrl('order/refund',array('id'=>$order['id']))}">{if !empty($order['refundstate'])}查看{else}申请退款{/if}{if !empty($order['refundstate'])}进度{/if}</a>
-
-				{/if}
+				
 
 
 
