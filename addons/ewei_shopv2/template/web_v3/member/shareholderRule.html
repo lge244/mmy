@@ -1,85 +1,54 @@
 {template '_header'}
-
-
 <div class="page-header">
-
-    当前位置：<span class="text-primary">{if !empty($level['id'])}编辑{else}添加{/if}保险分润{if !empty($level['id'])}({$level['levelname']}){/if}</span>
-
+	当前位置：<span class="text-primary">{if !empty($level['id'])}编辑{else}添加{/if}保险分润{if !empty($level['id'])}({$level['levelname']}){/if}</span>
 </div>
-
-
 <div class="page-content">
-
-    <div class="page-sub-toolbar">
-
-        <span class=''>
-        </span>
-
-    </div>
-    <input type="hidden" name="id" value="{$level['id']}"/>
-    <div class="form-group">
-
-        <label class="col-lg control-label">股东规则</label>
-
-        <div class="col-sm-9 col-xs-12">
-            <div class='input-group fixsingle-input-group'>
-                <span class='input-group-addon'>复购周期</span>
-                <input type="number" name="shareholder_purchase_time" id="shareholder_purchase_time" class="form-control" value="{$agency_rule['shareholder_purchase_time']}"/>
-                <span class='input-group-addon'>天</span>
-            </div>
-            <div class='input-group fixsingle-input-group' style="margin-top: 5px;">
-                <span class='input-group-addon'>指定商品</span>
-                <select name="shareholder_goodsid" id="shareholder_goodsid" class="form-control tp_is_default" style="width:190px;">
-                    {loop $goods  $value}
-                    <option value="{$value['id']}" {if $agency_rule['agency_goodsid']==$value['id']}selected{/if}>{$value['title']}</option>
-                    {/loop}
-                </select>
-            </div>
-            <div class='input-group fixsingle-input-group' style="margin-top: 5px;">
-                <span class='input-group-addon'>分红比例</span>
-                <input type="number" name="shareholder_purchase_time" id="shareholder_ratio" class="form-control" value="{$agency_rule['shareholder_ratio']}"/>
-                <span class='input-group-addon'>%</span>
-            </div>
-            <div class='input-group fixsingle-input-group' style="margin-top: 5px;">
-                <span class='input-group-addon'>上级提成</span>
-                <input type="number" name="shareholder_purchase_time" id="pshareholder_ratio" class="form-control" value="{$agency_rule['pshareholder_ratio']}"/>
-                <span class='input-group-addon'>%</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-lg control-label"></label>
-        <div class="col-sm-9 col-xs-12">
-            <input type="submit" value="保存" class="btn btn-primary submit"/>
-        </div>
-    </div>
+	<div class="page-sub-toolbar">
+		<span class=''></span>
+	</div>
+	<form action="{php echo webUrl('member/shareholderRule/add')}" method="post">
+		<input type="hidden" name="id" value="{$level['id']}"/>
+		<div class="form-group">
+			<label class="col-lg control-label">股东规则</label>
+			<div class="col-sm-9 col-xs-12">
+				<div class='input-group fixsingle-input-group'>
+					<span class='input-group-addon'>复购周期</span>
+					<input type="number" name="shareholder_purchase_time" id="shareholder_purchase_time"
+					       class="form-control" value="{$agency_rule['shareholder_purchase_time']}"/>
+					<span class='input-group-addon'>天</span>
+				</div>
+				<div class="form-group" style="display: block;margin-top: 10px;">
+					<label class="col-sm-2 control-label">复购商品</label>
+					<div class="col-sm-8 col-xs-12">
+						<select id="shareholder_goodsid" name='shareholder_goodsid[]' class="form-control select2"
+						        style='width:605px;' multiple=''>
+							{loop $goods $value}
+							<option value="{$value['id']}" {if in_array($value['id'], $agency_rule_arr)}selected{/if}>{$value['title']}</option>
+							{/loop}
+						</select>
+					</div>
+				</div>
+				<div class='input-group fixsingle-input-group' style="margin-top: 5px;">
+					<span class='input-group-addon'>分红比例</span>
+					<input type="number" name="shareholder_ratio" id="shareholder_ratio" class="form-control"
+					       value="{$agency_rule['shareholder_ratio']}"/>
+					<span class='input-group-addon'>%</span>
+				</div>
+				<div class='input-group fixsingle-input-group' style="margin-top: 5px;">
+					<span class='input-group-addon'>上级提成</span>
+					<input type="number" name="pshareholder_ratio" id="pshareholder_ratio" class="form-control"
+					       value="{$agency_rule['pshareholder_ratio']}"/>
+					<span class='input-group-addon'>%</span>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-lg control-label"></label>
+			<div class="col-sm-9 col-xs-12">
+				<input type="submit" value="保存" class="btn btn-primary submit"/>
+			</div>
+		</div>
+	</form>
 </div>
 
 {template '_footer'}
-<script>
-    $('.submit').click(function () {
-        var shareholder_purchase_time = $('#shareholder_purchase_time').val();
-        var shareholder_ratio = $('#shareholder_ratio').val();
-        var pshareholder_ratio = $('#pshareholder_ratio').val();
-        var shareholder_goodsid = $('#shareholder_goodsid option:selected').val();
-        if (shareholder_purchase_time == 0 || shareholder_goodsid == 0 || shareholder_ratio == 0 || pshareholder_ratio == 0){
-            tip.msgbox.suc("规则信息请填写完整！");
-            return false;
-        }
-
-        $.post("{php echo webUrl('member/shareholderRule/add')}",{
-            "shareholder_purchase_time":shareholder_purchase_time,
-            "shareholder_goodsid":shareholder_goodsid,
-            "shareholder_ratio":shareholder_ratio,
-            "pshareholder_ratio":pshareholder_ratio,
-        },function (res) {
-            if(res.code == 0){
-                tip.msgbox.suc(res.msg)
-                window.location.reload();
-            }else{
-                tip.msgbox.err(res.msg)
-            }
-        },'json')
-    })
-</script>

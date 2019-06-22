@@ -26,9 +26,26 @@
 			<div class="name" style="color: #000000;">{php echo htmlspecialchars_decode($info['content'])}</div>
 		</div>
 	</a>
+	{if $member['level'] != 6}
 	<div style="text-align: center;margin-top: 20px;">
 		<a style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" id="btn">申请成为股东</a>
 	</div>
+	{else}
+	{loop $goods $g}
+	<a class="fui-goods-item" data-goodsid="14" href="{php echo mobileUrl('goods/detail', ['id' => $g['id']])}" data-type="1" data-nocache="true" style="position: relative;">
+		<div class="image   triangle" data-text="热销" data-lazyloaded="true" style="background-image: url('{php echo tomedia($g['thumb'])}');">
+		</div>
+		<div class="detail">
+			<div class="name" style="color: #000000;">{$g['title']}</div>
+			<p class="productprice noheight"></p>
+			<div class="price buy">
+				<span class="text" style="color: #ff5555;"><p class="minprice">¥{$g['marketprice']}</p></span>
+				<span class="buy buybtn-1" id="buy-btn" style="border-color: #ff5555;color:  #fff">购买</span>
+			</div>
+		</div>
+	</a>
+	{/loop}
+	{/if}
 
 	{template '_copyright'}
 </div>
