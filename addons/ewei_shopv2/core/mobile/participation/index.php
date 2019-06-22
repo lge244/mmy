@@ -17,7 +17,7 @@ class Index_EweiShopV2Page extends MobilePage
 
         $m_money = ($count * 10) / 100;
         $brokerage = $m_money / $member_num;
-        $a = pdo_update('ewei_shop_member', array('brokerage +=' => $brokerage, 'shareholder_money +=' => $brokerage, 'past_brokerage +=' => $brokerage), array('shareholder' => 1));
+        $a = pdo_update('ewei_shop_member', array('brokerage +=' => $brokerage, 'shareholder_money +=' => $brokerage, 'past_brokerage +=' => $brokerage), array('level' => 6));
         if ($a > 0) {
             $data['type'] = 0;
             $data['money'] = $brokerage;
