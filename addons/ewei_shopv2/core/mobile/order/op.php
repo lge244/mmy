@@ -95,7 +95,7 @@ class Op_EweiShopV2Page extends MobileLoginPage
 			pdo_update("ewei_shop_order_refund", $change_refund, array("id" => $order["refundid"], "uniacid" => $_W["uniacid"]));
 		}
 
-//		pdo_update("ewei_shop_order", array("status" => 3, "finishtime" => time(), "refundstate" => 0), array("id" => $order["id"], "uniacid" => $_W["uniacid"]));
+		pdo_update("ewei_shop_order", array("status" => 3, "finishtime" => time(), "refundstate" => 0), array("id" => $order["id"], "uniacid" => $_W["uniacid"]));
 //确认收货，修改订单状态
 		//获取上级和上级的上级的服务费
 		if ($member['fid']) {
