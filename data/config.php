@@ -3,7 +3,7 @@ defined('IN_IA') or exit('Access Denied');
 
 $config = array();
 
-$config['db']['master']['host'] = '127.0.0.1';
+$config['db']['master']['host'] = '211.149.132.233';
 $config['db']['master']['username'] = 'mmy';
 $config['db']['master']['password'] = 'zf3BHYPSCGTcejdx';
 $config['db']['master']['port'] = '3306';
@@ -38,7 +38,7 @@ $config['setting']['memory_limit'] = '256M';
 $config['setting']['filemode'] = 0644;
 $config['setting']['authkey'] = 'ce7b1036';
 $config['setting']['founder'] = '1';
-$config['setting']['development'] = 0;
+$config['setting']['development'] = 1;
 $config['setting']['referrer'] = 0;
 $config['setting']['https'] = 0;
 
