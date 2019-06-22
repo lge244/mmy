@@ -147,7 +147,14 @@ class Op_EweiShopV2Page extends MobileLoginPage
 //			}
 			$good_id_arr = json_decode(pdo_get('ewei_shop_member_level', ['id' => 5])['goodsid'], true);
 			if (is_array($good_id_arr) && in_array($price['goodsid'], $good_id_arr)) {
-				pdo_update('ewei_shop_member', ['level' => 5], ['openid' => $_W['ewei_shopv2_member']['openid']]);
+				$agency_rule = pdo_get('shop_agency_rule');
+				$starting_time = time();
+				$expiration_time = time() + (86400 * $agency_rule['agency_purchase_time']);
+				pdo_update('ewei_shop_member', [
+					'level'           => 5,
+					'starting_time'   => $starting_time,
+					'expiration_time' => $expiration_time
+				], ['openid' => $_W['ewei_shopv2_member']['openid']]);
 			}
 		}
 
