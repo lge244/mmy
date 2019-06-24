@@ -981,6 +981,19 @@ class System_EweiShopV2Model
 								)
 							)
 						),
+                        array(
+                            "title" => "小票打印机",
+                            "route" => "printer",
+                            "iscom" => "printer",
+                            "items" => array(
+                                array(
+                                    "title" => "打印机管理",
+                                    "route" => "printer_list",
+                                    "extends" => array("sysset.printer.printer_add")
+                                ),
+                                array("title" => "打印机模板库"),
+                                array("title" => "打印设置",
+                                    "route" => "set"))),
 						array(
 							"title" => "其他",
 							"items" => array(
