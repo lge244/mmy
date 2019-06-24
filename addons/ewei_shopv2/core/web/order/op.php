@@ -483,7 +483,11 @@ class Op_EweiShopV2Page extends WebPage
 		global $_GPC;
 		$opdata = $this->opData();
 		extract($opdata);
-		if (empty($item['addressid'])) 
+
+        $gid = pdo_get('ewei_shop_order_goods',array('id'=>$item['id']),array('goodsid'));
+        $dispatchid = pdo_get("ewei_shop_goods",array('id'=>$gid['goodsid']),array('dispatchid'));
+		$dispatchname = pdo_get('ewei_shop_dispatch',array('id'=>$dispatchid['dispatchid']));
+        if (empty($item['addressid']))
 		{
 			show_json(0, '无收货地址，无法发货！');
 		}
@@ -515,6 +519,7 @@ class Op_EweiShopV2Page extends WebPage
 					}
 					$ogoods = array();
 					$ogoods = pdo_fetchall('select sendtype from ' . tablename('ewei_shop_order_goods') . "\r\n" . '                        where orderid = ' . $item['id'] . ' and uniacid = ' . $_W['uniacid'] . ' order by sendtype desc ');
+
 					$senddata = array('sendtype' => $ogoods[0]['sendtype'] + 1, 'sendtime' => $data['sendtime']);
 					$data['sendtype'] = $ogoods[0]['sendtype'] + 1;
 					$goodsid = $_GPC['ordergoodsid'];

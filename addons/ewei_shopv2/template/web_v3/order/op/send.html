@@ -26,7 +26,7 @@
 						<label class="col-sm-2 control-label">快递公司</label>
 						<div class="col-sm-9 col-xs-12">
 							<select class="form-control" name="express" {if $item['city_express_state']==1}disabled="disabled"{/if} id="express">
-                                <option value="" data-name="">{if $item['city_express_state']==0}其他快递{else}同城配送{/if}</option>
+                                <option value="" data-name="">{if $item['city_express_state']==0}{if $dispatchid['dispatchid'] == 0}其他快递{else}{$dispatchname['dispatchname']}{/if}{else}同城配送{/if}</option>
                                 {loop $express_list $value}
                                 <option value="{$value['express']}" {if $item['express']==$value['express']}selected{/if} data-name="{$value['name']}">{$value['name']}</option>
                                 {/loop}

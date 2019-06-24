@@ -14,6 +14,8 @@ class Detail_EweiShopV2Page extends WebPage
 		$item = pdo_fetch('SELECT * FROM ' . tablename('ewei_shop_order') . ' WHERE id = :id and uniacid=:uniacid', array(':id' => $id, ':uniacid' => $_W['uniacid']));
 		$item['statusvalue'] = $item['status'];
 		$item['paytypevalue'] = $item['paytype'];
+		$tax = pdo_get("ewei_shop_purchase_tax");
+		$goodstax = $item['price'] * $tax['purchase_tax'] * 0.01;
 		$isonlyverifygoods = m('order')->checkisonlyverifygoods($item['id']);
 		$order_goods = array();
 		if (0 < $item['sendtype']) 

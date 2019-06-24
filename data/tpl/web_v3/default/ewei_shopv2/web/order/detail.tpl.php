@@ -932,6 +932,7 @@
                     <div class="price">
                         <p> <span class="price-inner">商品小计：</span><span style="font-weight: bold">￥<?php  echo $item['goodsprice'];?></span></p>
                         <p><span class="price-inner">运费：</span>￥<?php  echo $item['olddispatchprice'];?></p>
+                        <p><span class="price-inner">税费：</span>￥<?php  echo number_format($goodstax,2)?></p>
                         <?php  if(!$item['ispackage']) { ?>
                         <?php  if($item['taskdiscountprice']>0 ) { ?>
                         <p><span class="price-inner">任务活动优惠：</span><span class="text-danger">-￥<?php  echo $item['taskdiscountprice'];?></span></p>

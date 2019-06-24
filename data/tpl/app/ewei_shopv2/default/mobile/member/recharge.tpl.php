@@ -46,6 +46,11 @@
                 <div class="member_header"></div>
             </div>
             <div class="fui-cell-group fui-cell-click">
+                <a class="fui-cell" href="<?php  echo mobileUrl('member/rank')?>">
+                    <div class="fui-cell-icon"><i class="icon icon-gerenzhongxin"></i></div>
+                    <div class="fui-cell-text"><p>佣金排行</p></div>
+                    <div class="fui-cell-remark"></div>
+                </a>
                 <a class="fui-cell" href="<?php  echo mobileUrl('member/record')?>">
                     <div class="fui-cell-icon"><i class="icon icon-gerenzhongxin"></i></div>
                     <div class="fui-cell-text"><p>总金额记录</p></div>

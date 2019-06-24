@@ -26,7 +26,7 @@
 						<label class="col-sm-2 control-label">快递公司</label>
 						<div class="col-sm-9 col-xs-12">
 							<select class="form-control" name="express" <?php  if($item['city_express_state']==1) { ?>disabled="disabled"<?php  } ?> id="express">
-                                <option value="" data-name=""><?php  if($item['city_express_state']==0) { ?>其他快递<?php  } else { ?>同城配送<?php  } ?></option>
+                                <option value="" data-name=""><?php  if($item['city_express_state']==0) { ?><?php  if($dispatchid['dispatchid'] == 0) { ?>其他快递<?php  } else { ?><?php  echo $dispatchname['dispatchname'];?><?php  } ?><?php  } else { ?>同城配送<?php  } ?></option>
                                 <?php  if(is_array($express_list)) { foreach($express_list as $value) { ?>
                                 <option value="<?php  echo $value['express'];?>" <?php  if($item['express']==$value['express']) { ?>selected<?php  } ?> data-name="<?php  echo $value['name'];?>"><?php  echo $value['name'];?></option>
                                 <?php  } } ?>

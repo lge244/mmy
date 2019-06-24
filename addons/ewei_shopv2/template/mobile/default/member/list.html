@@ -1,0 +1,31 @@
+{template '_header'}
+
+<div class="fui-list-group order-item" data-orderid="207" data-verifycode="">
+    {loop $info $i}
+        <div class="fui-list-group-title lineblock2 ">
+            订单状态: {if $i['status']==0}待付款{elseif $i['status']==1}待发货{elseif $i['status']==2}待收货{elseif $i['status']==3}已完成{else}已关闭{/if}
+        </div>
+        <div class="fui-list goods-list">
+            <div class="fui-list-inner">
+                <div class="text goodstitle towline">商品总价格:￥{$i['goodsprice']}</div>
+            </div>
+        </div>
+        <div class="fui-list goods-list">
+            <div class="fui-list-inner">
+                <div class="text goodstitle towline">总运费:￥{$i['dispatchprice']}</div>
+            </div>
+        </div>
+        <div class="fui-list goods-list">
+            <div class="fui-list-inner">
+                <div class="text goodstitle towline">总税费:￥{$i['tax']}</div>
+            </div>
+        </div>
+        <div class="fui-list-group-title lineblock">
+            <div class="fui-list-inner">
+                <div class="text goodstitle towline">总实际支付:{php echo date("Y-m-d H:i:s",$i['createtime'])}</div>
+            </div>
+        </div>
+    {/loop}
+</div>
+
+{template '_footer'}
