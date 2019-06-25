@@ -247,7 +247,7 @@
     <?php  if(!$no_right) { ?>
         <div class="wb-panel <?php  if(empty($system['foldpanel'])) { ?>in<?php  } ?>">
             <div class="panel-group" id="panel-accordion">
-                <?php if(cv('order.list.status1|order.list.status4')) { ?>
+                <?php if(cv('order.list.status1|order.list.status2|order.list.status0|order.list.status4')) { ?>
                 <div class="panel panel-default">
                     <div class="panel-heading" data-toggle="collapse" data-parent="#panel-accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <h4 class="panel-title">
@@ -259,6 +259,16 @@
                             <?php  if(!empty($system['order1'])) { ?>
                             <li class="panel-list">
                                 <a class="panel-list-text" href="<?php  echo webUrl('order/list/status1')?>">待发货订单 <span class="pull-right text-warning">(<?php  echo $system['order1'];?>)</span> </a>
+                            </li>
+                            <?php  } ?>
+                            <?php  if(!empty($system['order2'])) { ?>
+                            <li class="panel-list">
+                                <a class="panel-list-text" href="<?php  echo webUrl('order/list/status2')?>">待收货订单 <span class="pull-right text-warning">(<?php  echo $system['order2'];?>)</span> </a>
+                            </li>
+                            <?php  } ?>
+                            <?php  if(!empty($system['order0'])) { ?>
+                            <li class="panel-list">
+                                <a class="panel-list-text" href="<?php  echo webUrl('order/list/status0')?>">待付款订单 <span class="pull-right text-warning">(<?php  echo $system['order0'];?>)</span> </a>
                             </li>
                             <?php  } ?>
                             <?php  if(!empty($system['order4'])) { ?>
