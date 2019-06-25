@@ -131,6 +131,7 @@ if ((ENDTIME - STARTTIME) > $_W['config']['setting']['maxtimeurl']) {
 	);
 	pdo_insert('core_performance', $data);
 }
+dump($c);dump($a);die;
 function _forward($c, $a) {
 	$file = IA_ROOT . '/web/source/' . $c . '/' . $a . '.ctrl.php';
 	if (!file_exists($file)) {
