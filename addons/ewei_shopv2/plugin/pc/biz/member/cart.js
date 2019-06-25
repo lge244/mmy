@@ -23,7 +23,7 @@ define(['core', 'tpl', '../goods/picker.js'], function(core, tpl, picker) {
             if ($(this).attr('stop')) {
                 return
             }
-            window.location.href=core.getUrl('pc.order.create');
+            window.location.href=core.getUrl('order.create');
         });
         $('.btn-edit').unbind('click').click(function() {
             modal.changeMode()

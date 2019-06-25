@@ -982,6 +982,7 @@ class List_EweiShopV2Page extends WebPage
 		$stores = pdo_fetchall('select id,storename from ' . tablename('ewei_shop_store') . ' where uniacid=:uniacid ', array(':uniacid' => $uniacid));
 		$r_type = array('退款', '退货退款', '换货');
 		load()->func('tpl');
+		$member_list = pdo_getall('ewei_shop_member');
 		include $this->template('order/list');
 	}
 	public function main() 
