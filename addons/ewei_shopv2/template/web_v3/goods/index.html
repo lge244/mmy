@@ -130,6 +130,19 @@
             </div>
         </div>
     </form>
+    <form action="{php echo webUrl('extend/index/good')}" method="post" class="form-horizontal form-search" role="form">
+        <div class="page-toolbar">
+            <span class="pull-left" style="margin-right:30px;">
+                <label for="">添加时间:</label>
+                {php echo tpl_form_field_daterange('time', array('start_time'=>date('Y-m-d H:i', $start_time),'end_time'=>date('Y-m-d H:i', $end_time)),true);}
+            </span>
+            <div class="input-group col-sm-6 pull-right">
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="submit"> 导出</button>
+                </span>
+            </div>
+        </div>
+    </form>
     {if count($list)>0 && cv('goods.main')}
     <div class="row">
         <div class="col-md-12">
