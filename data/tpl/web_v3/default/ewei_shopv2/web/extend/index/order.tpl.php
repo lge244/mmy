@@ -1,5 +1,5 @@
-{php echo header('Content-type: application/vnd.ms-excel');}
-{php echo header('Content-Disposition: attachment; filename="订单记录.xls"');}
+<?php defined('IN_IA') or exit('Access Denied');?><?php  echo header('Content-type: application/vnd.ms-excel');?>
+<?php  echo header('Content-Disposition: attachment; filename="订单记录.xls"');?>
 <html xmlns:o="urn:schemas-microsoft-com:office:office"
       xmlns:x="urn:schemas-microsoft-com:office:excel"
       xmlns="http://www.w3.org/TR/REC-html40">
@@ -185,21 +185,21 @@
 			<td>数量</td>
 			<td>订单备注</td>
 		</tr>
-		{loop $list $row}
+		<?php  if(is_array($list)) { foreach($list as $row) { ?>
 		<tr>
-			<td>{$row['id']}</td>
-			<td>{$row['realname']}</td>
+			<td><?php  echo $row['id'];?></td>
+			<td><?php  echo $row['realname'];?></td>
 			<td>
-				{if $row['level'] == 0}普通用户{if}
-				{if $row['level'] == 5}分销商{if}
-				{if $row['level'] == 6}股东{if}
+				<?php  if($row['level'] == 0) { ?>普通用户{if}
+				<?php  if($row['level'] == 5) { ?>分销商{if}
+				<?php  if($row['level'] == 6) { ?>股东{if}
 			</td>
-			<td>{$row['ordersn']}</td>
-			<td>{$row['']}</td>
-			<td>{$row['dispatchprice']}</td>
-			<td>{$row['dispatchprice']}</td>
+			<td><?php  echo $row['ordersn'];?></td>
+			<td><?php  echo $row[''];?></td>
+			<td><?php  echo $row['dispatchprice'];?></td>
+			<td><?php  echo $row['dispatchprice'];?></td>
 		</tr>
-		{/loop}
+		<?php  } } ?>
 	</table>
 </div>
 </body>
