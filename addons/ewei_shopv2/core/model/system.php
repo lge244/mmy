@@ -2310,6 +2310,8 @@ class System_EweiShopV2Model
 		$arr = array(
 			"merch"       => ($this->merch ? 1 : 0),
 			"order1"      => 0,
+			"order2"	  =>0,
+			"order0"	  =>0,
 			"order4"      => 0,
 			"notice"      => array(),
 			"commission1" => 0,
@@ -2325,6 +2327,12 @@ class System_EweiShopV2Model
 		);
 		if ($this->cv("order.list.status1")) {
 			$arr["order1"] = $this->getOrderTotal(1);
+		}
+		if ($this->cv("order.list.status2")) {
+			$arr["order2"] = $this->getOrderTotal(2);
+		}
+		if ($this->cv("order.list.status0")) {
+			$arr["order0"] = $this->getOrderTotal(0);
 		}
 		if ($this->cv("order.list.status4")) {
 			$arr["order4"] = $this->getOrderTotal(4);
@@ -2400,7 +2408,27 @@ class System_EweiShopV2Model
 				$params[":merchid"] = intval($_W["merchid"]);
 			}
 			$total = pdo_fetchcolumn("SELECT COUNT(1) FROM " . tablename("ewei_shop_order") . " WHERE " . $condition, $params);
-		} else {
+		}elseif($status == 2){
+			$condition = "uniacid = :uniacid and isparent=0 and ismr=0 and  status=2 and deleted=0";
+			$params = array(
+				":uniacid" => $_W["uniacid"]
+			);
+			if ($this->merch) {
+				$condition .= " and merchid=:merchid";
+				$params[":merchid"] = intval($_W["merchid"]);
+			}
+			$total = pdo_fetchcolumn("SELECT COUNT(1) FROM " . tablename("ewei_shop_order") . " WHERE " . $condition, $params);
+		}elseif($status == 0){
+			$condition = "uniacid = :uniacid and isparent=0 and ismr=0 and  status=0 and deleted=0";
+			$params = array(
+				":uniacid" => $_W["uniacid"]
+			);
+			if ($this->merch) {
+				$condition .= " and merchid=:merchid";
+				$params[":merchid"] = intval($_W["merchid"]);
+			}
+			$total = pdo_fetchcolumn("SELECT COUNT(1) FROM " . tablename("ewei_shop_order") . " WHERE " . $condition, $params);
+		}else {
 			if ($status == 4) {
 				$condition = "uniacid = :uniacid and isparent=0 and ismr=0 and refundstate>0 and refundid<>0 and deleted=0";
 				$params = array(
