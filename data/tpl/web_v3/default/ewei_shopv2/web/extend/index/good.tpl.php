@@ -1,4 +1,5 @@
-<?php defined('IN_IA') or exit('Access Denied');?>
+<?php defined('IN_IA') or exit('Access Denied');?><?php  echo header('Content-type: application/vnd.ms-excel');?>
+<?php  echo header('Content-Disposition: attachment; filename="商品.xls"');?>
 <html xmlns:o="urn:schemas-microsoft-com:office:office"
       xmlns:x="urn:schemas-microsoft-com:office:excel"
       xmlns="http://www.w3.org/TR/REC-html40">
