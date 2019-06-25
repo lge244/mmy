@@ -2208,7 +2208,9 @@ class Order_EweiShopV2Model
       	$order = pdo_get("ewei_shop_order",array('id'=>$orderid),array('price'));
         //通过商品id找到分销比例
         $share = pdo_get("ewei_shop_goods",array('id'=>$gid['goodsid']),array('custodian_share','pcustodian_share','marketprice','discounts'));
-      	$share['discounts'] = json_decode($share['discounts']);
+
+        $share['discounts'] = json_decode($share['discounts'],true);
+
         if($info['level'] == 5){
               $share2commission = $share['discounts']['level5_pay'] * $share['custodian_share'] * 0.01;
               $share3commission = $share['discounts']['level5_pay'] * $share['pcustodian_share'] * 0.01;

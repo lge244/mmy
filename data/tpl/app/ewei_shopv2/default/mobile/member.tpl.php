@@ -409,6 +409,7 @@
 </script>
 </div>
 
+
 <script  language='javascript'>
 	var lis = $('.banner-ul').find('li');
 	$('.banner-ul').width(lis.length*8.3+'rem');
