@@ -21,9 +21,9 @@ class Index_EweiShopV2Page extends WebPage
 		if (!empty($openid) && empty($start_time) && empty($end_time)) {
 			$condition = ' a.openid = ' . $openid;
 		}
-		$sql = "select a.*,b.truename,b.level from `ims_ewei_shop_order` a left join `ims_ewei_shop_member` b on a.openid = b.openid where" . $condition;
+		$sql = "select a.*,b.realname,b.level,d.total from `ims_ewei_shop_order` a left join `ims_ewei_shop_order_goods` d on a.id = d.orderid left join `ims_ewei_shop_member` b on a.openid = b.openid where" . $condition;
 		$list = pdo_fetchall($sql);
-		dump($list);
+
 		include $this->template();
 	}
 }

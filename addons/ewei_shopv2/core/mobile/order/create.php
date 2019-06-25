@@ -2427,6 +2427,7 @@ class Create_EweiShopV2Page extends MobileLoginPage
         $order['addressid'] = ((empty($dispatchtype) ? $addressid : 0));
         $order['goodsprice'] = $goodsprice;
         $order['dispatchprice'] = $dispatch_price + $seckill_dispatchprice;
+        $order['taxes'] = $_GPC['taxes'];
         if (!(is_null($_SESSION['exchangeprice'])) && !(empty($_SESSION['exchange'])) && p('exchange')) {
             $order['price'] = $_SESSION['exchangeprice'] + $_SESSION['exchangepostage'];
             $order['ordersn'] = m('common')->createNO('order', 'ordersn', 'DH');
