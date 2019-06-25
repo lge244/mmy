@@ -697,6 +697,7 @@ define(['core', 'tpl', 'biz/plugin/diyform', 'biz/order/invoice'], function (cor
             'token': token,
             'packageid': modal.params.packageid,
             'fromquick': modal.params.fromquick,
+            'taxes' : parseFloat($('#purchase_tax').html())
         };
         if (modal.params.isverify && modal.params.isforceverifystore) {
             data.carrierid = modal.params.storeid

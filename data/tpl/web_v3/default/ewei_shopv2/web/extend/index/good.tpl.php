@@ -1,5 +1,5 @@
-{php echo header('Content-type: application/vnd.ms-excel');}
-{php echo header('Content-Disposition: attachment; filename="订单记录.xls"');}
+<?php defined('IN_IA') or exit('Access Denied');?><?php  echo header('Content-type: application/vnd.ms-excel');?>
+<?php  echo header('Content-Disposition: attachment; filename="商品.xls"');?>
 <html xmlns:o="urn:schemas-microsoft-com:office:office"
       xmlns:x="urn:schemas-microsoft-com:office:excel"
       xmlns="http://www.w3.org/TR/REC-html40">
@@ -171,37 +171,33 @@
 <!----------------------------->
 <div id="comm_32218" align=center x:publishsource="Excel">
 	<table border=0 cellpadding=0 cellspacing=0 width=
-	       style='border-collapse:collapse;table-layout:fixed;width:1500pt'>
+			style='border-collapse:collapse;table-layout:fixed;width:1500pt'>
 		<col width=72 span=3 style='width:54pt'>
 		<col width=94 style='mso-width-source:userset;mso-width-alt:3008;width:71pt'>
 		<tr height=18 style='height:13.5pt'>
-			<td width="5%">订单ID</td>
-			<td width="10%">用户名</td>
-			<td width="10%">用户等级</td>
-			<td width="20%">订单编号</td>
-			<td width="10%">产品价格</td>
-			<td width="5%">运费</td>
-			<td width="10%">税费</td>
-			<td width="10%">数量</td>
-			<td width="20%">订单备注</td>
+			<td width="5%">ID</td>
+			<td width="10%">名称</td>
+			<td width="25%">普通价格/会员价格/股东价格</td>
+			<td width="10%">库存</td>
+			<td width="5%">销量</td>
+			<td width="5%">状态</td>
+			<td width="10%">一级分润</td>
+			<td width="10%">二级分润</td>
+			<td width="20%">重量</td>
 		</tr>
-		{loop $list $row}
+		<?php  if(is_array($list)) { foreach($list as $row) { ?>
 		<tr>
-			<td>{$row['id']}</td>
-			<td>{$row['realname']}</td>
-			<td>
-				{if $row['level'] == 0}普通用户{/if}
-				{if $row['level'] == 5}分销商{/if}
-				{if $row['level'] == 6}股东{/if}
-			</td>
-			<td>{$row['ordersn']}</td>
-			<td>{php echo number_format($row['price'] - $row['dispatchprice'] - $row['taxes'], 2)}</td>
-			<td>{$row['dispatchprice']}</td>
-			<td>{$row['taxes']}</td>
-			<td>{$row['total']}</td>
-			<td>{$row['remarksaler']}</td>
+			<td><?php  echo $row['id'];?></td>
+			<td><?php  echo $row['title'];?></td>
+			<td><?php  echo $row['marketprice'];?>/<?php  echo json_decode($row['discounts'], true)['level5_pay']?>/<?php  echo json_decode($row['discounts'], true)['level6_pay']?></td>
+			<td><?php  echo $row['total'];?></td>
+			<td><?php  echo $row['salesreal'];?></td>
+			<td><?php  if($row['status'] == 1) { ?>上架<?php  } else { ?>下架<?php  } ?></td>
+			<td><?php  echo $row['custodian_share'];?>%</td>
+			<td><?php  echo $row['pcustodian_share'];?>%</td>
+			<td><?php  echo $row['weight'];?></td>
 		</tr>
-		{/loop}
+		<?php  } } ?>
 	</table>
 </div>
 </body>
