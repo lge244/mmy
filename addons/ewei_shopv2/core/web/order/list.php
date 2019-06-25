@@ -1,9 +1,9 @@
 <?php
-if (!(defined('IN_IA'))) 
-{
-	exit('Access Denied');
+if (!(defined('IN_IA'))) {
+    exit('Access Denied');
 }
-class List_EweiShopV2Page extends WebPage 
+
+class List_EweiShopV2Page extends WebPage
 {
 	protected function orderData($status, $st) 
 	{
@@ -1063,4 +1063,5 @@ class List_EweiShopV2Page extends WebPage
 		}
 	}
 }
+
 ?>
