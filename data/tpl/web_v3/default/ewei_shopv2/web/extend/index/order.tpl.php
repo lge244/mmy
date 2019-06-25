@@ -1,5 +1,4 @@
-<?php defined('IN_IA') or exit('Access Denied');?><?php  echo header('Content-type: application/vnd.ms-excel');?>
-<?php  echo header('Content-Disposition: attachment; filename="订单记录.xls"');?>
+<?php defined('IN_IA') or exit('Access Denied');?>
 <html xmlns:o="urn:schemas-microsoft-com:office:office"
       xmlns:x="urn:schemas-microsoft-com:office:excel"
       xmlns="http://www.w3.org/TR/REC-html40">
@@ -170,34 +169,36 @@
 <!--“从 EXCEL 发布网页”向导开始-->
 <!----------------------------->
 <div id="comm_32218" align=center x:publishsource="Excel">
-	<table border=0 cellpadding=0 cellspacing=0 width=300
-	       style='border-collapse:collapse;table-layout:fixed;width:233pt'>
+	<table border=0 cellpadding=0 cellspacing=0 width=
+	       style='border-collapse:collapse;table-layout:fixed;width:1500pt'>
 		<col width=72 span=3 style='width:54pt'>
 		<col width=94 style='mso-width-source:userset;mso-width-alt:3008;width:71pt'>
 		<tr height=18 style='height:13.5pt'>
-			<td>订单ID</td>
-			<td>用户名</td>
-			<td>用户等级</td>
-			<td>订单编号</td>
-			<td>产品价格</td>
-			<td>运费</td>
-			<td>税费</td>
-			<td>数量</td>
-			<td>订单备注</td>
+			<td width="5%">订单ID</td>
+			<td width="10%">用户名</td>
+			<td width="10%">用户等级</td>
+			<td width="20%">订单编号</td>
+			<td width="10%">产品价格</td>
+			<td width="5%">运费</td>
+			<td width="10%">税费</td>
+			<td width="10%">数量</td>
+			<td width="20%">订单备注</td>
 		</tr>
 		<?php  if(is_array($list)) { foreach($list as $row) { ?>
 		<tr>
 			<td><?php  echo $row['id'];?></td>
 			<td><?php  echo $row['realname'];?></td>
 			<td>
-				<?php  if($row['level'] == 0) { ?>普通用户{if}
-				<?php  if($row['level'] == 5) { ?>分销商{if}
-				<?php  if($row['level'] == 6) { ?>股东{if}
+				<?php  if($row['level'] == 0) { ?>普通用户<?php  } ?>
+				<?php  if($row['level'] == 5) { ?>分销商<?php  } ?>
+				<?php  if($row['level'] == 6) { ?>股东<?php  } ?>
 			</td>
 			<td><?php  echo $row['ordersn'];?></td>
-			<td><?php  echo $row[''];?></td>
+			<td><?php  echo number_format($row['price'] - $row['dispatchprice'] - $row['taxes'], 2)?></td>
 			<td><?php  echo $row['dispatchprice'];?></td>
-			<td><?php  echo $row['dispatchprice'];?></td>
+			<td><?php  echo $row['taxes'];?></td>
+			<td><?php  echo $row['total'];?></td>
+			<td><?php  echo $row['remarksaler'];?></td>
 		</tr>
 		<?php  } } ?>
 	</table>
