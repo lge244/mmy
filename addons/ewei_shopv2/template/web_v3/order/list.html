@@ -71,12 +71,14 @@
     }
 
     .tables    .table-row .ops.list-inner{
+
         border-right:none;
+
     }
 
     .tables .list-inner{
 
-        border-right: 1px solid #efefef;
+       border-right: 1px solid #efefef;
 
         vertical-align: middle;
 
@@ -156,9 +158,9 @@
 
         flex-direction: column;
 
-        -webkit-justify-content: center;
+       -webkit-justify-content: center;
 
-        justify-content: center;
+       justify-content: center;
 
     }
 
@@ -343,60 +345,87 @@
                     </select>
 
                 </span>
-                <span class="input-group-select">
-                    <select name='searchfield'  class='form-control'   style="width:110px;padding:0 5px;"  >
-                        <option value='ordersn' {if $_GPC['searchfield']=='ordersn'}selected{/if}>订单号</option>
-                        <option value='member' {if $_GPC['searchfield']=='member'}selected{/if}>会员信息</option>
-                        <option value='address' {if $_GPC['searchfield']=='address'}selected{/if}>收件人信息</option>
-                        <option value='location' {if $_GPC['searchfield']=='location'}selected{/if}>地址信息</option>
-                        <option value='expresssn' {if $_GPC['searchfield']=='expresssn'}selected{/if}>快递单号</option>
-                        <option value='goodstitle' {if $_GPC['searchfield']=='goodstitle'}selected{/if}>商品名称</option>
-                        <option value='goodssn' {if $_GPC['searchfield']=='goodssn'}selected{/if}>商品编码</option>
-                        <option value='saler' {if $_GPC['searchfield']=='saler'}selected{/if}>核销员</option>
-                        <option value='store' {if $_GPC['searchfield']=='store'}selected{/if}>核销门店</option>
-                        <option value='selfget' {if $_GPC['searchfield']=='selfget'}selected{/if}>自提门店</option>
-                        {if $merch_plugin}
-                        <option value='merch' {if $_GPC['searchfield']=='merch'}selected{/if}>商户名称</option>
-                        {/if}
-                    </select>
-                </span>
-                <input type="text" class="form-control input-sm"  name="keyword" id="keyword" value="{$_GPC['keyword']}" placeholder="请输入关键词"/>
-                <input type="hidden" name="export" id="export" value="0">
+
                 <span class="input-group-btn">
+
+                    {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
+
+                </span>
+
+                <span class="input-group-select">
+
+                    <select name='searchfield'  class='form-control'   style="width:110px;padding:0 5px;"  >
+
+                        <option value='ordersn' {if $_GPC['searchfield']=='ordersn'}selected{/if}>订单号</option>
+
+                        <option value='member' {if $_GPC['searchfield']=='member'}selected{/if}>会员信息</option>
+
+                        <option value='address' {if $_GPC['searchfield']=='address'}selected{/if}>收件人信息</option>
+
+                        <option value='location' {if $_GPC['searchfield']=='location'}selected{/if}>地址信息</option>
+
+                        <option value='expresssn' {if $_GPC['searchfield']=='expresssn'}selected{/if}>快递单号</option>
+
+                        <option value='goodstitle' {if $_GPC['searchfield']=='goodstitle'}selected{/if}>商品名称</option>
+
+                        <option value='goodssn' {if $_GPC['searchfield']=='goodssn'}selected{/if}>商品编码</option>
+
+                        <option value='saler' {if $_GPC['searchfield']=='saler'}selected{/if}>核销员</option>
+
+                        <option value='store' {if $_GPC['searchfield']=='store'}selected{/if}>核销门店</option>
+
+                        <option value='selfget' {if $_GPC['searchfield']=='selfget'}selected{/if}>自提门店</option>
+
+                        {if $merch_plugin}
+
+                        <option value='merch' {if $_GPC['searchfield']=='merch'}selected{/if}>商户名称</option>
+
+                            {/if}
+
+                    </select>
+
+                </span>
+
+                <input type="text" class="form-control input-sm"  name="keyword" id="keyword" value="{$_GPC['keyword']}" placeholder="请输入关键词"/>
+
+                <input type="hidden" name="export" id="export" value="0">
+
+                <span class="input-group-btn">
+
                         <button type="button" data-export="0" class="btn btn-primary btn-submit"> 搜索</button>
+
+<!--                        <button type="button" data-export="1" class="btn btn-success btn-submit">导出</button>-->
+
                 </span>
 
             </div>
 
+
+
         </div>
-        {if $_W['user']['jobid'] == 0 || $_W['user']['jobid'] == 3}
-        <div class="page-toolbar">
-           <span class="">
-				<select name="role_id" class='form-control select2' style="width:200px;" data-placeholder="角色">
-					<option value="0">请选择角色</option>
-					<option value="2">业务员</option>
-					<option value="5">营养师</option>
-					<option value="6">店长</option>
-					<option value="7">导购</option>
-				</select>
-			</span>
-            <span class="">
-				<select name="uid" class='form-control select2' style="width:200px;" data-placeholder="管理员">
-					<option value="0">请选择管理员</option>
-				</select>
-            </span>
-            <span class="input-group-btn" style="display: inline-block;">
-                {php echo tpl_form_field_daterange('time', array('starttime'=>date('Y-m-d H:i', $starttime),'endtime'=>date('Y-m-d H:i', $endtime)),true);}
-            </span>
-            <span class="" style="margin-right:30px;float: right;   ">
-				<a href="javascript:;" type="button" id="export_order" class="btn btn-success">导出</a>
-			</span>
-        </div>
-        {/if}
+
 
 
     </form>
 
+	<form action="{php echo webUrl('extend/index/order')}" method="post" class="form-horizontal table-search" role="form" id="">
+		<div class="page-toolbar">
+			<span class="input-group-select">
+				<select name="openid" class="form-control" style="width:200px;padding:0 5px;">
+					<option value="" {if $_GPC['paytype']==''}selected{/if}>请选择用户</option>
+					{loop $member_list $v}
+					<option value="{$v['openid']}">{$v['mobile']}--{$v['nickname']}</option>
+					{/loop}
+				</select>
+			</span>
+			<span class="input-group-btn">
+				{php echo tpl_form_field_daterange('time', array('start_time'=>date('Y-m-d H:i', $start_time),'end_time'=>date('Y-m-d H:i', $end_time)),true);}
+			</span>
+			<span class="input-group-btn">
+				<button type="submit" class="btn btn-success btn-submit">导出</button>
+			</span>
+		</div>
+	</form>
 
 
 
@@ -406,18 +435,28 @@
     <div class="row">
 
         <div class="col-md-12">
-            <div  class="">
-                <div class="table-header" style='background:#f8f8f8;height: 35px;line-height: 35px;padding: 0 20px'>
-                    <div style='border-left:1px solid #f2f2f2;width: 400px;text-align: left;'>商品</div>
-                    <div class="others">买家</div>
-                    <div class="others">支付/配送</div>
-                    <div class="others">价格</div>
-                    <div class="others">操作</div>
-                    <div class="others">状态</div>
-                </div>
-                {loop $list $item}
 
-                <div class="table-row"><div style='height:20px;padding:0;border-top:none;'>&nbsp;</div></div>
+            <div  class="">
+
+                <div class="table-header" style='background:#f8f8f8;height: 35px;line-height: 35px;padding: 0 20px'>
+
+                    <div style='border-left:1px solid #f2f2f2;width: 400px;text-align: left;'>商品</div>
+
+                    <div class="others">买家</div>
+
+                    <div class="others">支付/配送</div>
+
+                    <div class="others">价格</div>
+
+                    <div class="others">操作</div>
+
+                    <div class="others">状态</div>
+
+                </div>
+
+            {loop $list $item}
+
+            <div class="table-row"><div style='height:20px;padding:0;border-top:none;'>&nbsp;</div></div>
 
                 <div class="tables">
 
@@ -443,99 +482,99 @@
 
                             {if $item['merchid'] == 0}
 
-                            {ifp 'order.op.remarksaler'}
+                                {ifp 'order.op.remarksaler'}
 
-                            <a class='op'  data-toggle="ajaxModal" href="{php echo webUrl('order/op/remarksaler', array('id' => $item['id']))}" >
+                                <a class='op'  data-toggle="ajaxModal" href="{php echo webUrl('order/op/remarksaler', array('id' => $item['id']))}" >
 
-                                {if !empty($item['remarksaler'])}
+                                    {if !empty($item['remarksaler'])}
 
-                                <i class="icow icow-flag-o" style="color: #df5254;display: inline-block;vertical-align: middle" title="  查看备注"></i>
+                                    <i class="icow icow-flag-o" style="color: #df5254;display: inline-block;vertical-align: middle" title="  查看备注"></i>
 
-                                备注
+                                    备注
 
-                                &nbsp
+                                    &nbsp
 
-                                {else}
+                                    {else}
 
-                                <i class="icow icow-yibiaoji" style="color: #999;display: inline-block;vertical-align: middle" title="  添加备注" ></i>
+                                    <i class="icow icow-yibiaoji" style="color: #999;display: inline-block;vertical-align: middle" title="  添加备注" ></i>
 
-                                备注
+                                    备注
 
-                                &nbsp
+                                    &nbsp
+
+                                    {/if}
+
+                                </a>
 
                                 {/if}
 
-                            </a>
-
                             {/if}
+
+                            {if $item['merchid'] == 0}
+
+                                {if ($item['statusvalue']>=2 || $item['sendtype']>0) && !empty($item['addressid']) && $item['statusvalue']!=3 &&$item['city_express_state']==0}
+
+                                    {ifp 'order.op.send'}
+
+                                    <a class="op" data-toggle="ajaxModal"  href="{php echo webUrl('order/op/changeexpress', array('id' => $item['id']))}">
+
+                                        <i class="icow icow-wuliu" title="修改物流" style="color: #999;display: inline-block;vertical-align: middle"></i>
+
+                                        修改物流
+
+                                        &nbsp
+
+                                    </a>
+
+                                    {/if}
+
+                                {/if}
 
                             {/if}
 
                             {if $item['merchid'] == 0}
 
-                            {if ($item['statusvalue']>=2 || $item['sendtype']>0) && !empty($item['addressid']) && $item['statusvalue']!=3 &&$item['city_express_state']==0}
+                                {if empty($item['statusvalue'])}
 
-                            {ifp 'order.op.send'}
+                                    {ifp 'order.op.changeprice'}
 
-                            <a class="op" data-toggle="ajaxModal"  href="{php echo webUrl('order/op/changeexpress', array('id' => $item['id']))}">
+                                        {if $item['ispackage'] ==0}
 
-                                <i class="icow icow-wuliu" title="修改物流" style="color: #999;display: inline-block;vertical-align: middle"></i>
+                                        <a class='op'  data-toggle='ajaxModal' href="{php echo webUrl('order/op/changeprice',array('id'=>$item['id']))}">
 
-                                修改物流
+                                            <i class="icow icow-gaijia" title="订单改价"  style="color: #999;display: inline-block;vertical-align: middle"></i>
 
-                                &nbsp
+                                            订单改价
 
-                            </a>
+                                            &nbsp
 
-                            {/if}
+                                        </a>
 
-                            {/if}
+                                        {/if}
 
-                            {/if}
-
-                            {if $item['merchid'] == 0}
-
-                            {if empty($item['statusvalue'])}
-
-                            {ifp 'order.op.changeprice'}
-
-                            {if $item['ispackage'] ==0}
-
-                            <a class='op'  data-toggle='ajaxModal' href="{php echo webUrl('order/op/changeprice',array('id'=>$item['id']))}">
-
-                                <i class="icow icow-gaijia" title="订单改价"  style="color: #999;display: inline-block;vertical-align: middle"></i>
-
-                                订单改价
-
-                                &nbsp
-
-                            </a>
-
-                            {/if}
-
-                            {/if}
+                                    {/if}
 
                             {if $item['ismerch'] == 0}
 
-                            {ifp 'order.op.close'}
+                                {ifp 'order.op.close'}
 
-                            <a class='op'  data-toggle='ajaxModal' href="{php echo webUrl('order/op/close',array('id'=>$item['id']))}" >
+                                <a class='op'  data-toggle='ajaxModal' href="{php echo webUrl('order/op/close',array('id'=>$item['id']))}" >
 
-                                <i class="icow icow-shutDown" title="关闭订单"  style="color: #999;margin-right: 3px;display: inline-block;vertical-align: middle"></i>
+                                    <i class="icow icow-shutDown" title="关闭订单"  style="color: #999;margin-right: 3px;display: inline-block;vertical-align: middle"></i>
 
-                                关闭订单
+                                    关闭订单
 
-                                &nbsp
+                                    &nbsp
 
-                            </a>
+                                </a>
 
 
 
-                            {/if}
-
-                            {/if}
+                                {/if}
 
                             {/if}
+
+                                {/if}
 
                             {/if}
 
@@ -561,41 +600,41 @@
 
                                     <div >
 
-                                        <div class="title">
+                                       <div class="title">
 
-                                            {if $g['ispresell']==1}
+                                           {if $g['ispresell']==1}
 
-                                            <label class="fui-tag fui-tag-danger">预</label>
+                                           <label class="fui-tag fui-tag-danger">预</label>
 
-                                            {/if}
+                                           {/if}
 
-                                            {$g['title']}<br/>
+                                           {$g['title']}<br/>
 
-                                            <span style="color: #999"> {if !empty($g['optiontitle'])}{$g['optiontitle']}{/if}{$g['goodssn']}</span>
+                                           <span style="color: #999"> {if !empty($g['optiontitle'])}{$g['optiontitle']}{/if}{$g['goodssn']}</span>
 
 
 
-                                        </div>
+                                       </div>
 
-                                        {if $g['seckill_task']}
+                                              {if $g['seckill_task']}
 
                                         <div>
 
-                                            <span class="label label-danger">{$g['seckill_task']['tag']}</span>
+                                                <span class="label label-danger">{$g['seckill_task']['tag']}</span>
 
-                                            {if $g['seckill_room']}
+                                                {if $g['seckill_room']}
 
-                                            <span class="label label-primary">
+                                                    <span class="label label-primary">
 
                                                         {php echo $g['seckill_room']['tag']?:$g['seckill_room']['title']}
 
                                                     </span>
 
-                                            {/if}
+                                                {/if}
 
                                         </div>
 
-                                        {/if}
+                                           {/if}
 
 
 
@@ -655,69 +694,69 @@
 
                             {if $item['statusvalue'] > 0}
 
-                            {if $item['paytypevalue']==1}
+                                {if $item['paytypevalue']==1}
 
-                            <span> <i class="icow icow-yue text-warning" style="font-size: 17px;"></i><span>余额支付</span></span>
+                                   <span> <i class="icow icow-yue text-warning" style="font-size: 17px;"></i><span>余额支付</span></span>
 
-                            {elseif $item['paytypevalue']==11}
+                                {elseif $item['paytypevalue']==11}
 
-                            <span> <i class="icow icow-kuajingzhifuiconfukuan text-danger" style="font-size: 17px"></i>后台付款</span>
+                                   <span> <i class="icow icow-kuajingzhifuiconfukuan text-danger" style="font-size: 17px"></i>后台付款</span>
 
-                            {elseif $item['paytypevalue']==21}
+                                {elseif $item['paytypevalue']==21}
 
-                            <span> <i class="icow icow-weixinzhifu text-success" style="font-size: 17px"></i>微信支付</span>
+                                   <span> <i class="icow icow-weixinzhifu text-success" style="font-size: 17px"></i>微信支付</span>
 
-                            {elseif $item['paytypevalue']==22}
+                                {elseif $item['paytypevalue']==22}
 
-                            <span><i class="icow icow-zhifubaozhifu text-primary" style="font-size: 17px"></i>支付宝支付</span>
+                                    <span><i class="icow icow-zhifubaozhifu text-primary" style="font-size: 17px"></i>支付宝支付</span>
 
-                            {/if}
+                                {/if}
 
                             {else if $item['statusvalue'] == 0}
 
-                            <!-- 未支付 -->
+                                <!-- 未支付 -->
 
-                            {if $item['paytypevalue']!=3}
+                                {if $item['paytypevalue']!=3}
 
-                            <label class='label label-default'>未支付</label>
+                                    <label class='label label-default'>未支付</label>
 
-                            {else}
+                                {else}
 
-                            <span> <i class="text-primary icow icow-icon" style="font-size: 17px"></i>货到付款</span>
+                                       <span> <i class="text-primary icow icow-icon" style="font-size: 17px"></i>货到付款</span>
 
-                            {/if}
+                                {/if}
 
                             {else if $item['statusvalue'] == -1}
 
-                            {if $item['paytypevalue']==1}
+                                {if $item['paytypevalue']==1}
 
-                            <span> <i class="icow icow-yue text-warning" style="font-size: 17px;display:inline-block;height: 17px;width: 17px;padding-top: 3px"></i><span>余额支付</span></span>
+                                <span> <i class="icow icow-yue text-warning" style="font-size: 17px;display:inline-block;height: 17px;width: 17px;padding-top: 3px"></i><span>余额支付</span></span>
 
-                            {elseif $item['paytypevalue']==11}
+                                {elseif $item['paytypevalue']==11}
 
-                            <span> <i class="icow icow-kuajingzhifuiconfukuan text-danger" style="font-size: 17px"></i>后台付款</span>
+                                <span> <i class="icow icow-kuajingzhifuiconfukuan text-danger" style="font-size: 17px"></i>后台付款</span>
 
-                            {elseif $item['paytypevalue']==21}
+                                {elseif $item['paytypevalue']==21}
 
-                            <span> <i class="icow icow-weixin text-success" style="font-size: 17px"></i>微信支付</span>
+                                <span> <i class="icow icow-weixin text-success" style="font-size: 17px"></i>微信支付</span>
 
-                            {elseif $item['paytypevalue']==22}
+                                {elseif $item['paytypevalue']==22}
 
-                            <span><i class="icow icow-zhifubao text-primary" style="font-size: 17px"></i>支付宝支付</span>
+                                <span><i class="icow icow-zhifubao text-primary" style="font-size: 17px"></i>支付宝支付</span>
+
+                                {/if}
 
                             {/if}
 
-                            {/if}
 
 
+                           {if $item['paytypevalue'] == 3 && $item['is_cashier'] == 1}
 
-                            {if $item['paytypevalue'] == 3 && $item['is_cashier'] == 1}
-
-                            <span style='margin-top:5px;display:block;'>收银台现金收款</span>
+                                <span style='margin-top:5px;display:block;'>收银台现金收款</span>
 
                             {else}
 
-                            <span style='margin-top:5px;display:block;'>{$item['dispatchname']}</span>
+                                <span style='margin-top:5px;display:block;'>{$item['dispatchname']}</span>
 
                             {/if}
 
@@ -729,9 +768,9 @@
 
 
 
-                        <a  class="list-inner" data-toggle='popover' data-html='true' data-placement='right' data-trigger="hover"
+                            <a  class="list-inner" data-toggle='popover' data-html='true' data-placement='right' data-trigger="hover"
 
-                            data-content="<table style='width:100%;'>
+                                                                           data-content="<table style='width:100%;'>
 
                                     <tr>
 
@@ -921,17 +960,17 @@
 
                     "> <div style='text-align:center'>
 
-                            ￥{php echo number_format($item['price'],2)}
+                                ￥{php echo number_format($item['price'],2)}
 
-                            {if $item['dispatchprice']>0}
+                                {if $item['dispatchprice']>0}
 
-                            <br/>(含运费:￥{php echo number_format( $item['dispatchprice'],2)})
+                                <br/>(含运费:￥{php echo number_format( $item['dispatchprice'],2)})
 
-                            {/if}
+                                {/if}
 
-                        </div>
+                            </div>
 
-                        </a>
+                          </a>
 
                         <div  class="list-inner" style='text-align:center'>
 
@@ -957,64 +996,28 @@
 
                             {if $item['city_express_state']==1}
 
-                            <a class='op  text-primary' href="javascript:tip.msgbox.err('同城配送暂不支持物流信息查询');">物流信息</a>
+                                <a class='op  text-primary' href="javascript:tip.msgbox.err('同城配送暂不支持物流信息查询');">物流信息</a>
 
                             {/if}
 
                             {if $item['invoicename'] && $item['sta']>0}
 
-                            {php $invoice_info = m('sale')->parseInvoiceInfo($item['invoicename']);}
+                                {php $invoice_info = m('sale')->parseInvoiceInfo($item['invoicename']);}
 
-                            {if $invoice_info['title'] && $invoice_info['entity'] === false}
+                                {if $invoice_info['title'] && $invoice_info['entity'] === false}
 
-                            <a class='{if $item['invoice_img']}text-success{else}text-danger{/if}' data-toggle="ajaxModal"
+                                <a class='{if $item['invoice_img']}text-success{else}text-danger{/if}' data-toggle="ajaxModal"
 
-                            href="{php echo webUrl('order.op.upload_invoice',array('order_id'=>$item['id']));}">
+                                href="{php echo webUrl('order.op.upload_invoice',array('order_id'=>$item['id']));}">
 
-                            {if $item['invoice_img']}查看发票{else}上传发票{/if}</a>
+                                {if $item['invoice_img']}查看发票{else}上传发票{/if}</a>
+
+                                {/if}
 
                             {/if}
 
-                            {/if}
-
-                        </div>
-                        {if empty($item['statusvalue'])}
-                        {ifp 'order.op.pay'}
-                        {if $item['ismerch'] == 0}
-                        <div  class="list-inner" style='text-align:center'>
-                            <select class="form-control tpl-category-parent select2" id="guide" name="guide"  data-rule-required="true" >
-                                <option value="-1">请选择导购</option>
-                                {loop $guide $row}
-                                <option value="{$row['uid']}" >{$row['truename']}</option>
-                                {/loop}
-                            </select>
                         </div>
 
-                        {/if}
-                        {/if}
-                        {/if}
-                        {if $item['status'] == '待付款' || $item['status'] == '待发货' || $item['status'] == '待取货'}
-                        <div  class="list-inner" style='text-align:center'>
-                            <span>
-                                <?php
-                                    if ($item['integral'] == null) {
-                                        echo '使用积分:' . ($item['goodsprice'] - $item['price']) * 100;
-                                    } else {
-                                        echo '使用积分:' . $item['integral'];
-                                    }
-                                ?>
-                            </span>
-                        </div>
-                        {/if}
-                        {if $item['status'] == '已完成'}
-                        <div  class="list-inner" style='text-align:center'>
-                            <span><?php
-                                    $res = pdo_get('users', ['uid' => $item['guideid']]);
-                                    echo $res['truename'] ? $res['truename'] : '没有导购';
-                                ?></span>
-
-                        </div>
-                        {/if}
                         <div  class='ops list-inner' style='line-height:20px;text-align:center' >
 
                             <span class='text-{$item['statuscss']}'>{$item['status']}</span>
@@ -1027,71 +1030,71 @@
 
                     </div>
 
-                    {if !empty($item['remark'])}
+            {if !empty($item['remark'])}
 
-                    <div class="table-row"><div  style='background:#fdeeee;color:red;flex: 1;;'>买家备注: {$item['remark']}</div></div>
+            <div class="table-row"><div  style='background:#fdeeee;color:red;flex: 1;;'>买家备注: {$item['remark']}</div></div>
+
+            {/if}
+
+
+
+            {if (!empty($level)&&!empty($item['agentid'])) || (!empty($item['merchname']) && $item['merchid'] > 0)}
+
+            <div class="table-footer table-row" style="margin:0 20px">
+
+                <div  style='text-align:left'>
+
+                    {if !empty($item['merchname']) && $item['merchid'] > 0}
+
+                    商户名称：<span class="text-info">{$item['merchname']}</span>
 
                     {/if}
 
+                    {if !empty($agentid)}
 
-
-                    {if (!empty($level)&&!empty($item['agentid'])) || (!empty($item['merchname']) && $item['merchid'] > 0)}
-
-                    <div class="table-footer table-row" style="margin:0 20px">
-
-                        <div  style='text-align:left'>
-
-                            {if !empty($item['merchname']) && $item['merchid'] > 0}
-
-                            商户名称：<span class="text-info">{$item['merchname']}</span>
-
-                            {/if}
-
-                            {if !empty($agentid)}
-
-                            <b>分销订单级别:</b> {$item['level']}级 <b>分销佣金:</b> {$item['commission']} 元
-
-                            {/if}
-
-                        </div>
-
-                        <div  style='text-align:right'>
-
-                            {if empty($agentid)}
-
-                            {if $item['commission1']!=-1}<b>1级佣金:</b> {$item['commission1']} 元 {/if}
-
-                            {if $item['commission2']!=-1}<b>2级佣金:</b> {$item['commission2']} 元 {/if}
-
-                            {if $item['commission3']!=-1}<b>3级佣金:</b> {$item['commission3']} 元 {/if}
-
-                            {/if}
-
-
-
-                            {if !empty($item['agentid']) && !$is_merch[$item['id']]}
-
-                            {ifp 'commission.apply.changecommission'}
-
-                            <a class="text-primary" data-toggle="ajaxModal"  href="{php echo webUrl('commission/apply/changecommission', array('id' => $item['id']))}">修改佣金</a>
-
-                            {/if}
-
-                            {/if}
-
-                        </div>
-
-                    </div>
+                    <b>分销订单级别:</b> {$item['level']}级 <b>分销佣金:</b> {$item['commission']} 元
 
                     {/if}
 
                 </div>
 
-                {/loop}
+                <div  style='text-align:right'>
+
+                    {if empty($agentid)}
+
+                    {if $item['commission1']!=-1}<b>1级佣金:</b> {$item['commission1']} 元 {/if}
+
+                    {if $item['commission2']!=-1}<b>2级佣金:</b> {$item['commission2']} 元 {/if}
+
+                    {if $item['commission3']!=-1}<b>3级佣金:</b> {$item['commission3']} 元 {/if}
+
+                    {/if}
+
+
+
+                    {if !empty($item['agentid']) && !$is_merch[$item['id']]}
+
+                    {ifp 'commission.apply.changecommission'}
+
+                    <a class="text-primary" data-toggle="ajaxModal"  href="{php echo webUrl('commission/apply/changecommission', array('id' => $item['id']))}">修改佣金</a>
+
+                    {/if}
+
+                    {/if}
+
+                </div>
+
+            </div>
+
+            {/if}
+
+            </div>
+
+            {/loop}
 
                 <div style="padding: 20px;text-align: right" >
 
-                    {$pager}
+                        {$pager}
 
                 </div>
 
@@ -1112,33 +1115,34 @@
     {/if}
 
 </div>
+
+
+
 <script>
 
     //没有选中时间段不能导出
 
     $(function () {
 
-        var guide = $(this).parents('.ops').prev().children('#guide').val();
-
         $('.btn-submit').click(function () {
 
             var e = $(this).data('export');
 
-            if (e == 1) {
+            if(e==1 ){
 
-                if ($('#keyword').val() != '') {
-
-                    $('#export').val(1);
-
-                    $('#search').submit();
-
-                } else if ($('#searchtime').val() != '') {
+                if($('#keyword').val() !='' ){
 
                     $('#export').val(1);
 
                     $('#search').submit();
 
-                } else {
+                }else if($('#searchtime').val()!=''){
+
+                    $('#export').val(1);
+
+                    $('#search').submit();
+
+                }else{
 
                     tip.msgbox.err('请选择按时间导出!');
 
@@ -1146,7 +1150,7 @@
 
                 }
 
-            } else {
+            }else{
 
                 $('#export').val(0);
 
@@ -1154,91 +1158,10 @@
 
             }
 
-        });
-        function change_guide(that) {
-            var obj_change = that.parents('.ops').prev().children('#guide');
-            obj.change(function () {
-                var guide = $(this).val();
-            });
-            return guide;
-        }
-
-        $('.payment').click(function () {
-            var guide = $(this).parents('.ops').prev().prev().children('#guide').val();
-            var order_id = $(this).attr('order_id');
-            var that = $(this);
-            that.attr("disabled", "true");
-            if (guide == -1 || !guide) {
-                tip.msgbox.err('请选择导购');
-                that.removeAttr('disabled');
-                return false;
-            }
-            $.ajax({
-                type: 'post',
-                url: '{php echo webUrl("order/op/pay")}',
-                data: {
-                    id: order_id,
-                    guide: guide
-                },
-                dataType: 'json',
-                success: function (data) {
-                    if (data.status) {
-                        tip.msgbox.err('付款成功');
-                        that.parents('.tables').remove();
-                    } else {
-                        tip.msgbox.err('付款失败');
-                    }
-                }
-            })
-
         })
+
     })
-</script>
-<script>
-    $("select[name=role_id]").change(function () {
-        $('select[name=uid]').empty();
-        var role_id = $(this).val();
-        $.ajax({
-            type: 'post',
-            url: "{php echo webUrl('purchase/index/export')}",
-            data: {
-                role_id: role_id
-            },
-            dataType: 'json',
-            success: function (data) {
-                if (data.status != 1) {
-                    tip.msgbox.err('当前没有数据!');
-                    return false;
-                }
-                var html = '';
-                html = "<option value='0' selected='selected'>请选择管理员</option>";
-                $.each(data.result.data, function (k, v) {
-                    html += "<option value=" + v.uid + ">" + v.username + "</option>";
-                });
-                $('select[name=uid]').append(html);
-            }
-        })
-    });
-    $("select[name=uid]").change(function () {
-        var uid = $(this).val();
-        var start_time = $("input[name='time[start]']").val();
-        var end_time = $("input[name='time[end]']").val();
-        $('#export_order').click(function () {
-            $.ajax({
-                type: 'post',
-                url: "{php echo webUrl('extend/userOrder')}",
-                data: {
-                    uid: uid,
-                    start_time : start_time,
-                    end_time : end_time
-                },
-                success: function (data) {
-                    window.location = "http://" + document.domain + "/web/index.php?c=site&a=entry&m=ewei_shopv2&do=web&r=extend.userOrder&uid=" + uid;
-                }
-            })
-        })
-    });
+
 </script>
 
 {template '_footer'}
-
