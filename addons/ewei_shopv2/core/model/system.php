@@ -714,6 +714,11 @@ class System_EweiShopV2Model
 							"title" => "客服提成",
 							"route" => "service",
 							"desc"  => "客服提成设置"
+						),
+						array(
+							"title" => "客服分红",
+							"route" => "dividend",
+							"desc"  => "客服分红"
 						)
 					)
 				),

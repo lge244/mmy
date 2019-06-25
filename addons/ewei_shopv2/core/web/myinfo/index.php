@@ -18,6 +18,7 @@ class Index_EweiShopV2Page extends WebPage
 			$list = pdo_getall('service_rebate_record');
 			foreach ($list as $k => $v) {
 				$member = pdo_get('ewei_shop_member', array('id' => $v['mid']), array('realname', 'mobile', 'nickname'));
+				$list[$k]['uid_name'] = pdo_get('users', ['uid' => $v['uid']])['username'];
 				$list[$k]['mid'] = $member;
 			}
 		}
