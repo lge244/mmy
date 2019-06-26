@@ -1,37 +1,38 @@
 {template '_header'}
-
 <div class="page-header">
-    当前位置：<span class="text-primary">我的用户消费记录</span>
+	当前位置：<span class="text-primary">我的用户消费记录</span>
 </div>
 <div class="page-content">
-
-    <div class="row">
-        <div class="col-md-12">
-            <table class="table table-responsive">
-                <thead class="navbar-inner">
-                <tr>
-                    <th style="width:15%;">记录ID</th>
-                    <th style="width:25%;">用户名称</th>
-                    <th style="width:20%;">用户电话</th>
-                    <th style="width:20%;">返利金额</th>
-                    <th style="width:20%;">返利时间</th>
-                </tr>
-                </thead>
-                <tbody>
-                {loop $list $row}
-                <tr>
-                    <td>{$row['id']}</td>
-                    <td>{if ($row['mid']['realname']) == ""} {$row['mid']['nickname']} {else} {$row['mid']['realname']}{/if}</td>
-                    <td>{$row['mid']['mobile']}</td>
-                    <td>{$row['brokerage']} 元</td>
-                    <td><?php echo date('Y-m-d H:i:s',$row['time']); ?></td>
-                </tr>
-                {/loop}
-                </tbody>
-            </table>
-        </div>
-    </div>
-
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-responsive">
+				<thead class="navbar-inner">
+				<tr>
+					<th style="width:15%;">记录ID</th>
+					<th style="width:25%;">用户名称</th>
+					<th style="width:25%;">客服账号</th>
+					<th style="width:20%;">用户电话</th>
+					<th style="width:20%;">返利金额</th>
+					<th style="width:20%;">返利时间</th>
+				</tr>
+				</thead>
+				<tbody>
+				{loop $list $row}
+				<tr>
+					<td>{$row['id']}</td>
+					<td>{if ($row['mid']['realname']) == ""} {$row['mid']['nickname']} {else}
+						{$row['mid']['realname']}{/if}
+					</td>
+					<td>{$row['uid_name']}</td>
+					<td>{$row['mid']['mobile']}</td>
+					<td>{$row['brokerage']} 元</td>
+					<td><?php echo date('Y-m-d H:i:s',$row['time']); ?></td>
+				</tr>
+				{/loop}
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 {template '_footer'}
 
