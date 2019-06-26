@@ -26,8 +26,9 @@
             <div class="acc-input">
                 <div class="title">11位手机号</div>
                 <div class="input">
+
                     <input type="tel" class="input-inner" value="<?php  echo trim($_GPC['mobile'])?>" placeholder="请输入手机号码" name="mobile" id="mobile" maxlength="11" />
-                    <input type="hidden" class="input-inner" value=""  name="uid" id="uid" maxlength="11" />
+                    <input type="hidden" class="input-inner" value="<?php  echo $_GPC['uid'];?>"  name="uid" id="uid" maxlength="11" />
                 </div>
             </div>
             <?php  if(!empty($set['wap']['smsimgcode'])) { ?>

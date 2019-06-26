@@ -123,7 +123,7 @@ define(['core', 'foxui.picker', 'jquery.gcjs'], function (core) {
                 FoxUI.toast.show('两次密码输入不一致');
                 return
             }
-            $('#btnSubmit').html('正在处理...').attr('stop', 1);
+            // $('#btnSubmit').html('正在处理...').attr('stop', 1);
             var url = !modal.type ? "account/register" : "account/forget";
             core.json(url, {
                 mobile: $('#mobile').val(),
@@ -137,9 +137,6 @@ define(['core', 'foxui.picker', 'jquery.gcjs'], function (core) {
                     $('#btnSubmit').html(text).removeAttr('stop');
                     return
                 } else {
-                    if ($('#uid').val() != ''){
-                        // window.location.href ="http://baidu.com";
-                    }
                     FoxUI.alert(ret.result.message, '', function () {
                         if (modal.backurl) {
                             location.href = core.getUrl('account/login', {
@@ -147,9 +144,17 @@ define(['core', 'foxui.picker', 'jquery.gcjs'], function (core) {
                                 backurl: modal.backurl
                             })
                         } else {
-                            location.href = core.getUrl('account/login', {
-                                mobile: $('#mobile').val()
-                            })
+                            if ($('#uid').val() != ''){
+
+                                location.href = core.getUrl('download/index', {
+
+                                })
+                            }else{
+                                location.href = core.getUrl('account/login', {
+                                    mobile: $('#mobile').val()
+                                })
+                            }
+
                         }
                     })
                 }
