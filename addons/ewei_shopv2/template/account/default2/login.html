@@ -41,9 +41,11 @@
         </div>
 
         <div class="btn" id="btnSubmit">立即登录</div>
+        {if is_weixin()}
         <div class="text">
             <p>还没有帐号? <a href="{$set['wap']['regurl']}">立即注册</a></p>
         </div>
+        {/if}
         {if is_h5app()}
             {if !empty($sns['wx']) || !empty($sns['qq'])}
                 <div class="sns-login">

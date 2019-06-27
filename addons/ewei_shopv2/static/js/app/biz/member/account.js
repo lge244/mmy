@@ -144,16 +144,12 @@ define(['core', 'foxui.picker', 'jquery.gcjs'], function (core) {
                                 backurl: modal.backurl
                             })
                         } else {
-                            if ($('#uid').val() != ''){
+                         
 
                                 location.href = core.getUrl('download/index', {
 
                                 })
-                            }else{
-                                location.href = core.getUrl('account/login', {
-                                    mobile: $('#mobile').val()
-                                })
-                            }
+
 
                         }
                     })
