@@ -93,6 +93,17 @@
 </div>
 
 <div class="form-group">
+    <label class="col-lg control-label">上级id</label>
+    <div class="col-sm-9 col-xs-12">
+        <?php if(cv('member.list.edit')) { ?>
+        <?php  echo tpl_form_field_editor(array('name'=>'data[id]', 'value'=>$member['id']))?>
+        <?php  } else { ?>
+        <div class='form-control-static'><?php  echo $member['id'];?></div>
+        <?php  } ?>
+    </div>
+</div>
+
+<div class="form-group">
     <label class="col-lg control-label">积分上限</label>
     <div class="col-sm-9">
 
