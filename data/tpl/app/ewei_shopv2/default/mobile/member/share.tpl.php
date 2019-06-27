@@ -52,16 +52,7 @@
         <div style="margin-top:70px;color: #000;">
             <p style="font-size: 1rem; margin-left: 30px;">如何推广 ？</p>
             <ul style=" margin-left: 50px; list-style-type:none; margin-top: 10px;">
-                <li style="margin-top: 10px; font-size: 1rem;">
-                    ① <span style="font-size: 0.8rem">使用推广链接推广</span>
-                </li>
-                <li>
-                    <input type="url" id="share_url" value="<?php  echo $url;?>" style="margin-top: 10px; margin-left: 20px;height: 30px;  border: 1px solid #ff0011; font-size: 0.7rem; ">
-                    <button style="border: 0px; background: #ff0011; color: white; padding: 7px 20px;" onclick="copyUrl()">点击复制</button>
-                </li>
-                <li style="margin-top: 10px; font-size: 1rem;">
-                    ② <span style="font-size: 0.8rem">使用推广二维码推广</span>
-                </li>
+                
                 <li>
                     <div  style="margin-left: 20px;margin-top: 10px;display: inline-block" >
                         <img id="share_img" src="<?php  echo m('qrcode')->createQrcode($url)?>" width='130' alt='链接二维码'>

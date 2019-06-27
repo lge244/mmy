@@ -16,7 +16,7 @@
 <div class='fui-page  fui-page-current'>
 	<div class="fui-header">
 		<div class="fui-header-left">
-			<a class="" href="<?php  echo mobileUrl('index')?>"></a>
+			<a class="back" href="<?php  echo mobileUrl('index')?>"></a>
 		</div>
 		<div class="title">代理</div>
 		<div class="fui-header-right"></div>
