@@ -92,15 +92,18 @@
     </div>
 </div>
 
-<div class="form-group">
-    <label class="col-lg control-label">上级id</label>
-    <div class="col-sm-9 col-xs-12">
-        <?php if(cv('member.list.edit')) { ?>
-        <?php  echo tpl_form_field_editor(array('name'=>'data[id]', 'value'=>$member['id']))?>
-        <?php  } else { ?>
-        <div class='form-control-static'><?php  echo $member['id'];?></div>
-        <?php  } ?>
-    </div>
+<div class="form-group dispatch_info">
+        <label class="col-lg control-label">上级设置</label>
+        <div class="col-sm-6 col-xs-6" style='padding-left:0'>
+            <div class="input-group col-sm-6" >
+                <select class="form-control col-sm-6 tpl-category-parent select2" name="nam">
+                  	<?php  if($member['fid'] == 0) { ?><option value="0">总店</option><?php  } ?>
+                    <?php  if(is_array($me)) { foreach($me as $m) { ?>
+                    <option value="<?php  echo $m['id'];?>" <?php  if($m['id'] == $member['fid']) { ?>selected="true"<?php  } ?>><?php  echo $m['nickname'];?></option>
+                    <?php  } } ?>
+                </select>
+            </div>
+        </div>
 </div>
 
 <div class="form-group">
