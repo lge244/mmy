@@ -13,7 +13,6 @@ class Share_EweiShopV2Page extends MobileLoginPage
         $level = m('member')->getLevel($_W['openid']);
         $fmember = pdo_fetch('select * from ' . tablename('ewei_shop_member') . ' where id=:id limit 1', array(':id' => $member['fid']));
         $url ="http://".$_SERVER['SERVER_NAME']."/app/index.php?i=2&c=entry&m=ewei_shopv2&do=mobile&r=account.register"."&uid=".$member['id'];
-
         include $this->template();
     }
 }

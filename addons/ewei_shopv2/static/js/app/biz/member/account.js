@@ -148,8 +148,6 @@ define(['core', 'foxui.picker', 'jquery.gcjs'], function (core) {
                                 location.href = core.getUrl('download/index', {
 
                                 })
-
-
                         }
                     })
                 }

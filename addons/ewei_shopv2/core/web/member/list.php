@@ -179,11 +179,13 @@ class List_EweiShopV2Page extends WebPage
 	{
 		global $_W;
 		global $_GPC;
+
 		$area_set = m('util')->get_area_config_set();
 		$new_area = intval($area_set['new_area']);
 		$shop = $_W['shopset']['shop'];
 		$hascommission = false;
 		$plugin_com = p('commission');
+      
 		if ($plugin_com) 
 		{
 			$plugin_com_set = $plugin_com->getSet();
@@ -221,6 +223,7 @@ class List_EweiShopV2Page extends WebPage
 			$aagentlevels = $plugin_abonus->getLevels();
 		}
 		$member = m('member')->getMember($id);
+      
 		if ($hascommission) 
 		{
 			$member = $plugin_com->getInfo($id, array('total', 'pay'));
@@ -262,6 +265,7 @@ class List_EweiShopV2Page extends WebPage
 				$snslevels = $plugin_sns->getLevels();
 			}
 		}
+     
 		$diyform_flag = 0;
 		$diyform_flag_commission = 0;
 		$diyform_flag_globonus = 0;
@@ -290,6 +294,7 @@ class List_EweiShopV2Page extends WebPage
 				$aafields = iunserializer($member['diyaagentfields']);
 			}
 		}
+       //1
 		$groups = m('member')->getGroups();
 		$levels = m('member')->getLevels();
 		$openbind = false;
@@ -299,6 +304,7 @@ class List_EweiShopV2Page extends WebPage
 		}
 		if ($_W['ispost']) 
 		{
+          pdo_update('ewei_shop_member',array('fid'=>$_GPC['nam']),array('id'=>$_GPC['id']));
 			$data = ((is_array($_GPC['data']) ? $_GPC['data'] : array()));
 			if ($data['maxcredit'] < 0) 
 			{
@@ -343,10 +349,14 @@ class List_EweiShopV2Page extends WebPage
 			{
 				$data['groupid'] = '';
 			}
+          
 			pdo_update('ewei_shop_member', $data, array('id' => $id, 'uniacid' => $_W['uniacid']));
+        
 			$member = array_merge($member, $data);
+          
 			plog('member.list.edit', '修改会员资料  ID: ' . $member['id'] . ' <br/> 会员信息:  ' . $member['openid'] . '/' . $member['nickname'] . '/' . $member['realname'] . '/' . $member['mobile']);
-			if ($hascommission) 
+			
+          if ($hascommission) 
 			{
 				if (cv('commission.agent.edit')) 
 				{
@@ -397,6 +407,7 @@ class List_EweiShopV2Page extends WebPage
 						{
 							$agent_flag = 1;
 						}
+                  
 						if (!(empty($agent_flag))) 
 						{
 							$time = time();
@@ -473,6 +484,7 @@ class List_EweiShopV2Page extends WebPage
 			}
 			if ($hasglobonus) 
 			{
+             
 				if (cv('globonus.partner.check')) 
 				{
 					$gdata = ((is_array($_GPC['gdata']) ? $_GPC['gdata'] : array()));
@@ -582,6 +594,7 @@ class List_EweiShopV2Page extends WebPage
 			}
 			show_json(1);
 		}
+     
 		if ($hascommission) 
 		{
 			$agentlevels = $plugin_com->getLevels();
@@ -658,6 +671,8 @@ class List_EweiShopV2Page extends WebPage
 				$aafields = iunserializer($member['diyaagentfields']);
 			}
 		}
+      	
+      	$me = pdo_getall("ewei_shop_member",array(),array('id','fid','nickname'));
 		include $this->template();
 	}
 	public function view() 

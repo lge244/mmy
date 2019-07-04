@@ -15,7 +15,7 @@
 					<th style="width:20%;">返利金额</th>
 					<th style="width:20%;">返利时间</th>
 				</tr>
-				</thead>sys
+				</thead>
 				<tbody>
 				<?php  if(is_array($list)) { foreach($list as $row) { ?>
 				<tr>
