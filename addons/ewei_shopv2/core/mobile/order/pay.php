@@ -1195,6 +1195,7 @@ class Pay_EweiShopV2Page extends MobileLoginPage
 				$seckill_color = $diypage["seckill_color"];
 			}
 		}
+
 		include($this->template());
 	}
 	protected function str($str) 

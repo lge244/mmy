@@ -144,7 +144,6 @@ define(['core', 'foxui.picker', 'jquery.gcjs'], function (core) {
                                 backurl: modal.backurl
                             })
                         } else {
-                         
 
                                 location.href = core.getUrl('download/index', {
 
