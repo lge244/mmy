@@ -1,4 +1,4 @@
-{template '_header'}
+<?php defined('IN_IA') or exit('Access Denied');?><?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('_header', TEMPLATE_INCLUDEPATH)) : (include template('_header', TEMPLATE_INCLUDEPATH));?>
 <link rel="stylesheet" type="text/css"
       href="../addons/ewei_shopv2/template/mobile/default/static/css/coupon.css?v=2.0.0">
 <link rel="stylesheet" type="text/css"
@@ -21,29 +21,29 @@
         <div class='fui-content member-page navbar'>
             <div style="overflow: hidden;height: 7.5rem;position: relative;background: #fff">
                 <div class="headinfo" style="z-index:100;border: none;">
-                    <a class="setbtn" href="{php echo mobileUrl('member/info')}" data-nocache='true'><i class="icon icon-shezhi"></i></a>
+                    <a class="setbtn" href="<?php  echo mobileUrl('member/info')?>" data-nocache='true'><i class="icon icon-shezhi"></i></a>
                     <div class="child">
                         <div class="title">我的上级</div>
-                        <div class="num">{$fmember['nickname']}</div>
+                        <div class="num"><?php  echo $fmember['nickname'];?></div>
                     </div>
                     <div class="child userinfo">
-                        <a href="{php echo mobileUrl('member/info')}" data-nocache="true" style="color: white;">
-                            <div class="face"><img src="{$member['avatar']}" onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"/></div>
-                            <div class="name">{$member['nickname']}</div>
+                        <a href="<?php  echo mobileUrl('member/info')?>" data-nocache="true" style="color: white;">
+                            <div class="face"><img src="<?php  echo $member['avatar'];?>" onerror="this.src='../addons/ewei_shopv2/static/images/noface.png'"/></div>
+                            <div class="name"><?php  echo $member['nickname'];?></div>
                         </a>
-                        <div class="level" {if !empty($_W['shopset']['shop']['levelurl'])}onclick='location.href="{$_W['shopset']['shop']['levelurl']}"'{/if}>
-                        {if empty($level['id'])}
-                        [{if empty($_W['shopset']['shop']['levelname'])}普通会员{else}{$_W['shopset']['shop']['levelname']}{/if}]
-                        {else}
-                        [{$level['levelname']}]
-                        {/if}
-                        {if !empty($_W['shopset']['shop']['levelurl'])}<i class='icon icon-question1' style='font-size:0.65rem'></i>{/if}
+                        <div class="level" <?php  if(!empty($_W['shopset']['shop']['levelurl'])) { ?>onclick='location.href="<?php  echo $_W['shopset']['shop']['levelurl'];?>"'<?php  } ?>>
+                        <?php  if(empty($level['id'])) { ?>
+                        [<?php  if(empty($_W['shopset']['shop']['levelname'])) { ?>普通会员<?php  } else { ?><?php  echo $_W['shopset']['shop']['levelname'];?><?php  } ?>]
+                        <?php  } else { ?>
+                        [<?php  echo $level['levelname'];?>]
+                        <?php  } ?>
+                        <?php  if(!empty($_W['shopset']['shop']['levelurl'])) { ?><i class='icon icon-question1' style='font-size:0.65rem'></i><?php  } ?>
                     </div>
                 </div>
                 <div class="child">
-                   <a href="{php echo mobileUrl('member/team',array('id'=>$member['id']))}">
+                   <a href="<?php  echo mobileUrl('member/team',array('id'=>$member['id']))?>">
                         <div class="title">我的团队</div>
-<!--                        <div class="num">{php echo number_format($member['invite'],0)}人</div>-->
+<!--                        <div class="num"><?php  echo number_format($member['invite'],0)?>人</div>-->
                     </a>
                 </div>
             </div>
@@ -52,9 +52,14 @@
         <div style="margin-top:70px;color: #000;">
             <p style="font-size: 1rem; margin-left: 30px;">如何推广 ？</p>
             <ul style=" margin-left: 50px; list-style-type:none; margin-top: 10px;">
+<<<<<<< HEAD
+                
+=======
+
+>>>>>>> 4eec3a560f08e61ce9c2be7c38ac99421f8c6b52
                 <li>
                     <div  style="margin-left: 20px;margin-top: 10px;display: inline-block" >
-                        <img id="share_img" src="{php echo m('qrcode')->createQrcode($url)}" width='130' alt='链接二维码'>
+                        <img id="share_img" src="<?php  echo m('qrcode')->createQrcode($url)?>" width='130' alt='链接二维码'>
                     </div>
                     <button style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" onclick="save()">点击保存</button>
                 </li>
@@ -78,4 +83,4 @@
     }
 </script>
 
-{template '_footer'}
+<?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('_footer', TEMPLATE_INCLUDEPATH)) : (include template('_footer', TEMPLATE_INCLUDEPATH));?>
