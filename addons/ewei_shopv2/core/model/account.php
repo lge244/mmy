@@ -79,6 +79,20 @@ class Account_EweiShopV2Model
 
 		return $salt;
 	}
+
+	public function checkBuy($stime,$level){
+		$levelname = pdo_get('ewei_shop_member_level',array('id'=>$level))['levelname'];
+		$date = date('Y-m',time());
+		$date1 = $date.'-01';
+		$date2 = strtotime($date."-01");
+		if($date2 < $stime){
+			$data['msg'] = "尊敬的用户你好，本月复购产品您还没有购买，下个月将无法继续享受".$levelname."权益";
+			$data['code'] = 1;
+		}else{
+			$data['code'] = 2;
+		}
+		return $data;
+	}
 }
 
 if (!defined('IN_IA')) {

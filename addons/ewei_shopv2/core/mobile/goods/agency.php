@@ -9,6 +9,10 @@ class Agency_EweiShopV2Page extends MobilePage
     {
         global $_W;
         $member = m('member')->getMember($_W['openid'], true);
+        if(!$member['relaname'] || !$member['province'] || !$member['city']){
+	        echo "<script>alert('请填写详细信息！');window.location.href='/index.php?i=2&c=entry&m=ewei_shopv2&do=mobile&r=member.info';</script>";
+	        return false;
+        }
         if($member['level'] != 6){
             $info = pdo_get('content', array('id' => 1), array('content'));
             if($member['level'] == 5){

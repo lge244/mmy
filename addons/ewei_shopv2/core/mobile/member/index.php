@@ -7,9 +7,14 @@ class Index_EweiShopV2Page extends MobileLoginPage
 {
 	public function main() 
 	{
+
 		global $_W;
 		global $_GPC;
 		$member = m('member')->getMember($_W['openid'], true);
+		$checkbuy = m('account')->checkBuy($member['starttime'],$member['level']);
+		if($checkbuy['code'] == 1){
+			echo "<script>alert('".$checkbuy["msg"]."')</script>";
+		}
 		$level = m('member')->getLevel($_W['openid']);
 		if (com('wxcard')) 
 		{

@@ -54,7 +54,11 @@
             <ul style=" margin-left: 50px; list-style-type:none; margin-top: 10px;">
                 <li>
                     <div  style="margin-left: 20px;margin-top: 10px;display: inline-block" >
+                        {if $member['level'] == 0}
+                        <img id="share_img" src="../addons/ewei_shopv2/template/mobile/default/download/img/down-bg.jpg" width='130' alt='链接二维码'>
+                        {else}
                         <img id="share_img" src="{php echo m('qrcode')->createQrcode($url)}" width='130' alt='链接二维码'>
+                        {/if}
                     </div>
                     <button style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" onclick="save()">点击保存</button>
                 </li>

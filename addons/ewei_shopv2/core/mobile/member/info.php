@@ -119,7 +119,6 @@ class Info_EweiShopV2Page extends MobileLoginPage
 		global $_W;
 		global $_GPC;
 		$member = $this->member;
-
 		if ($_W['ispost']) {
 			$nickname = trim($_GPC['nickname']);
 			$avatar = trim($_GPC['avatar']);

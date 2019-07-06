@@ -107,15 +107,8 @@
 		<div class="fui-cell-group">
 			<div class="fui-cell must ">
 				<div class="fui-cell-label ">姓名</div>
-				<div class="fui-cell-info c000"><input type="text" class='fui-input' id='realname' name='realname' placeholder="请输入您的姓名"  value="{$member['realname']}" /></div>
+				<div class="fui-cell-info c000"><input type="text" class='fui-input' id='realname' name='realname' placeholder="请输入您的姓名"  value="{$member['realname']}" required="required"/></div>
 			</div>
-
-			{if empty($wapset['open'])}
-				<div class="fui-cell must">
-					<div class="fui-cell-label">手机号</div>
-					<div class="fui-cell-info c000"><input type="text" class='fui-input' id='mobile' name='mobile' placeholder="请输入您的手机号"  value="{$member['mobile']}" /></div>
-				</div>
-			{/if}
 			
 			<div class="fui-cell">
 				<div class="fui-cell-label">微信号</div>
@@ -126,7 +119,7 @@
 				<div class="fui-cell-info c000"><input type="text"  class='fui-input'  id='birthday' name='birthday' placeholder="请选择出生日期"  value="{$member['birthday']}" readonly/></div>
 				<div class="fui-cell-remark down" ></div>
 			</div>
-			<div class="fui-cell">
+			<div class="fui-cell must" >
 				<div class="fui-cell-label ">所在城市</div>
 				<div class="fui-cell-info c000"><input type="text"  class='fui-input'  id='city' name='city' placeholder="请选择城市"  value="{if !empty($show_data) && !empty($member) && !empty($member['city'])}{$member['province']} {$member['city']}{/if}" data-value="{if !empty($show_data)}{$member['datavalue']}{/if}" readonly/></div>
 				<div class="fui-cell-remark down" ></div>

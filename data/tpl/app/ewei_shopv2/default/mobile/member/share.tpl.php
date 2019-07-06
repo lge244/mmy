@@ -52,14 +52,13 @@
         <div style="margin-top:70px;color: #000;">
             <p style="font-size: 1rem; margin-left: 30px;">如何推广 ？</p>
             <ul style=" margin-left: 50px; list-style-type:none; margin-top: 10px;">
-<<<<<<< HEAD
-                
-=======
-
->>>>>>> 4eec3a560f08e61ce9c2be7c38ac99421f8c6b52
                 <li>
                     <div  style="margin-left: 20px;margin-top: 10px;display: inline-block" >
+                        <?php  if($member['level'] == 0) { ?>
+                        <img id="share_img" src="../addons/ewei_shopv2/template/mobile/default/download/img/down-bg.jpg" width='130' alt='链接二维码'>
+                        <?php  } else { ?>
                         <img id="share_img" src="<?php  echo m('qrcode')->createQrcode($url)?>" width='130' alt='链接二维码'>
+                        <?php  } ?>
                     </div>
                     <button style=" border: 0px; background: #ff0011; color: white; padding: 7px 20px;" onclick="save()">点击保存</button>
                 </li>

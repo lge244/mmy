@@ -105,7 +105,7 @@
 				<div class="icon icon-pink radius"><i class="icon icon-daituikuan2"></i></div>
 				<div class="text">退换货</div>
 			</a>
-			<a class="fui-icon-col external before" <?php  if($_W['ewei_shopv2_member']['level'] == 0) { ?> onclick="alert('需要等级达到代理才可以邀请好友')" <?php  } else { ?> href="<?php  echo mobileUrl('member/share')?> <?php  } ?>">
+			<a class="fui-icon-col external before"  href="<?php  echo mobileUrl('member/share')?>">
 			<div class="icon icon-pink radius"><i class="icon icon-share" style="color: #ff6a54;"></i></div>
 			<div class="text">推广处</div>
 			</a>
