@@ -3,7 +3,7 @@ if (!(defined('IN_IA')))
 {
 	exit('Access Denied');
 }
-class mOp_EweiShopV2Page extends WebPage 
+class Op_EweiShopV2Page extends WebPage
 {
 	public function delete() 
 	{

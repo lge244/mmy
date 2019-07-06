@@ -43,7 +43,7 @@
     </li>
     {/if}
 
-             {ifp 'order.list.main'}
+    {ifp 'order.list.main'}
     <li {if $_W['routes']=='order.list' && $_GPC['status']=='' && $_GPC['refund']!='1'}class="active"{/if}>
         <a href="{php echo webUrl('order/list')}" >全部订单<span class="all">--</span></a>
     </li>
